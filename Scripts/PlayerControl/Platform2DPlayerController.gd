@@ -4,8 +4,8 @@ extends KinematicBody2D
 var cMove = preload("res://Scripts/Movement/MovePlatformer.gd")
 var cInput = load("res://Scripts/Input/InputManager.gd")
 var cAnimState = preload("res://Scripts/Movement/AnimationState.gd")
-#var cShooting = preload("res://Scripts/Classes/Shooting.gd")
-#var cThrowing  = preload("res://Scripts/Classes/Throwing.gd")
+var cShooting = preload("res://Scripts/Attacks/Shooting.gd")
+#var cThrowing  = preload("res://Scripts/Attacks/Throwing.gd")
 
 # exports to inspector
 export var playerMaxSpeed = 200
@@ -13,7 +13,7 @@ export var acceleration = 0.2
 export var jumpForce = 200
 export var jumpCount = 2
 
-# clear instances
+# declare instances
 
 var key_left = null
 var key_right= null
@@ -73,7 +73,7 @@ func _ready():
 
 	player = get_node(".")
 
-	# create platformer2D move controller
+	# create platformer2D movement controller
 
 	move = cMove.new(player, key_left, key_right, key_jump, key_crunch, playerMaxSpeed, acceleration, jumpForce, jumpCount)
 
@@ -83,14 +83,14 @@ func _ready():
 
 	# create shooting instance and bullet container
 
-	#var fire_pivot = get_node("FireOrigin_RIGHT")
-	#fire = cShooting.new(move, key_fire,Globals.bullet_prefab,container,fire_pivot,false)
+	var fire_pivot = get_node("Body/FireOrigin_RIGHT")
+	fire = cShooting.new(move, key_fire,Globals.bullet_prefab,container,fire_pivot,false)
 	#throw = cThrowing.new(player,key_throw,Globals.granade_prefab,container)
 	
 
 	#disable rapid fire
 
-	#fire.RapidFire(false)
+	fire.RapidFire(false)
 
 	# create teleport button info instance
 	#teleport_info = Globals.teleport_button_info.instance()
@@ -104,18 +104,11 @@ func _ready():
 	
 	# prepare inventory/gamedata to default values (remove when you need reset items amount)
 	
-	# Inventory.Set('coins',0);
-	# Inventory.Set('health',100);
-	# Inventory.Set('ammo',100);
-	# Inventory.Set('granade',9);
-	# Inventory.Set('powerup_speed',0);
-	# Inventory.Set('powerup_jump',0);
-	# Inventory.Set('powerup_gravity',0);
-	# Inventory.Set('KEY_A',false);
-	# Inventory.Set('KEY_B',false);
-	# Inventory.Set('KEY_C',false);
-	# Inventory.Set('KEY_D',false);
-	# Inventory.Save()
+	GameData.Set('coins',0)
+	GameData.Set('health',100)
+	GameData.Set('ammo',100)
+	GameData.Set('granade',9)
+	GameData.Save()
 
 	# get sound fx library for player
 	#Globals.player_sfx = Utils.find_node("PlayerSoundFX")
@@ -133,7 +126,7 @@ func _ready():
 # Respawn player position on level start if exist entity GAME_PlayerStart in scene
 # -----------------------------------------------------------
 func Respawn():
-	var spawn_point = Utils.find_node("PlayerStart")
+	var spawn_point = Utils.FindNode("PlayerStart")
 	if spawn_point:
 		spawn_point.Respawn(self)
 
@@ -152,7 +145,7 @@ func _physics_process(delta):
 	anim.Play(playerAnimState)
 
 	# check shooting
-	#fire.Check()
+	fire.Check()
 	
 	# check throwing
 	#throw.Check()

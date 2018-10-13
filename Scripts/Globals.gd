@@ -30,7 +30,7 @@ var items = {};
 # powerups
 
 # bullet prefab for firing
-
+onready var bullet_prefab = preload("res://Prefabs/Bullet/Bullet.tscn")
 # Sound FX player
 
 # ---------------------------------------------------------------------------
