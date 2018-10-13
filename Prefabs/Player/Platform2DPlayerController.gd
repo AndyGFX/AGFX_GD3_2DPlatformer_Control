@@ -111,7 +111,7 @@ func _ready():
 	GameData.Save()
 
 	# get sound fx library for player
-	#Globals.player_sfx = Utils.find_node("PlayerSoundFX")
+	Globals.player_sfx = Utils.FindNode("SoundFXPlayer")
 
 	# respawn play at 'start_point'
 	#Respawn()

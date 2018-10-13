@@ -7,7 +7,9 @@ const scn_explosion = [
 	] 
 	
 export var DAMAGE = 25
-var bulletSpeed = 200
+export var FireSFXName = "Shoot1"
+export var ExplosionSFXName = "Explosion1"
+export var bulletSpeed = 300
 
 const TYPE = "BULLET"
 
@@ -17,6 +19,7 @@ func _ready():
 	add_to_group("BULLET")
 	connect("area_entered", self, "_on_area_enter")
 	connect("body_entered", self, "_on_body_enter")
+	Globals.player_sfx.Play(self.FireSFXName)
 	randomize()
 	pass
 
@@ -37,6 +40,7 @@ func _physics_process(delta):
 # ---------------------------------------------------------
 func create_explosion():
 
+	Globals.player_sfx.Play(self.ExplosionSFXName)
 	var idx = int(round(rand_range(0,2)))
 	var explosion = scn_explosion[idx].instance()
 	explosion.set_position(get_position())

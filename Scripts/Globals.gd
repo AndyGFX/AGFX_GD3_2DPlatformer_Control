@@ -31,7 +31,9 @@ var items = {};
 
 # bullet prefab for firing
 onready var bullet_prefab = preload("res://Prefabs/Bullet/Bullet.tscn")
+
 # Sound FX player
+var player_sfx = null
 
 # ---------------------------------------------------------------------------
 # GAME Levels
