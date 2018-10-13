@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Explosion_0.png-696609178233255fdc4a8919e507aec7.stex"
+path="res://.import/Bullet.png-a8729932b8235ad378f286dd0435b4a7.stex"
 
 [deps]
 
-source_file="res://Sprites/Explosions/Explosion_0.png"
-dest_files=[ "res://.import/Explosion_0.png-696609178233255fdc4a8919e507aec7.stex" ]
+source_file="res://Prefabs/Bullet/Bullet.png"
+dest_files=[ "res://.import/Bullet.png-a8729932b8235ad378f286dd0435b4a7.stex" ]
 
 [params]
 
