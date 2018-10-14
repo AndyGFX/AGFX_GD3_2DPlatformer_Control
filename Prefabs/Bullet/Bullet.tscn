@@ -20,7 +20,7 @@ audio_bus_name = "Master"
 script = ExtResource( 1 )
 DAMAGE = 25
 FireSFXName = "Shoot1"
-ExplosionSFXName = "Explosion"
+ExplosionSFXName = "Explosion1"
 bulletSpeed = 300
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
