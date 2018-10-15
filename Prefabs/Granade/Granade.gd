@@ -7,9 +7,10 @@ const scn_explosion = [
 	]
 
 export var granadeDamage = 25
+export var ExplosionSFXName = "Explosion1"
 
 func _ready():	
-	connect("body_enter", self, "_on_body_enter")
+	connect("body_entered", self, "_on_body_enter")
 	add_to_group("GRANADE")
 	pass
 	
@@ -36,5 +37,11 @@ func _on_body_enter(other):
 		create_explosion()
 		queue_free()
 	pass
+	
+	if other.is_in_group("ENEMY"):
+		create_explosion()
+		queue_free()
+		# your code here ...
+	pass	
 
 

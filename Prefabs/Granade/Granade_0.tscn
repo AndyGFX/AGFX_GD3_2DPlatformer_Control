@@ -31,6 +31,7 @@ angular_damp = -1.0
 script = ExtResource( 1 )
 _sections_unfolded = [ "Applied Forces", "Linear" ]
 granadeDamage = 25
+ExplosionSFXName = "Explosion1"
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 

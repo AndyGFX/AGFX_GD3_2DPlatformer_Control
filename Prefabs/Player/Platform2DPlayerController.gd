@@ -158,14 +158,14 @@ func _exit_tree():
 	#Inventory.Save();
 	pass
 
-# # ---------------------------------------------------------
-# # ON ENTER TRIGGER callback for scene entities
-# # ---------------------------------------------------------
-# func _on_TriggerDetector_area_enter( area ):
+# ---------------------------------------------------------
+# ON ENTER TRIGGER callback for scene entities
+# ---------------------------------------------------------
+func _on_TriggerDetector_area_entered( area ):
 
-# 	# | pickup COIN
-# 	# -----------------------------------------------------
-# 	if area.has_method('PickupCoin'): area.PickupCoin()
+# | pickup COIN
+# -----------------------------------------------------
+	if area.has_method('PickupCoin'): area.PickupCoin()
 
 # 	# | pickup AMMO
 # 	# -----------------------------------------------------
@@ -239,10 +239,11 @@ func _exit_tree():
 # 		yield(Utils.create_timer(1), "timeout") 
 # 		area.EnterToEndPoint()
 		
-# # ---------------------------------------------------------
-# # ON EXIT TRIGGER callback for scene entities
-# # ---------------------------------------------------------
-# func _on_TriggerDetector_area_exit( area ):
+ # ---------------------------------------------------------
+ # ON EXIT TRIGGER callback for scene entities
+ # ---------------------------------------------------------
+# func _on_TriggerDetector_area_exited(area):
+#	pass # replace with function body
 
 # 	# reset teleport to target when player exit from area and key wasn't pressed
 # 	if area.has_method('ResetTeleport'):
@@ -257,4 +258,6 @@ func _exit_tree():
 # func Damage(val,direction):
 # 	Inventory.Add("health",-val);
 # 	move.Hurt(direction)
+
+
 
