@@ -22,20 +22,22 @@ func _init(_thrower,_key, _granade,_holder):
 	key = _key
 	granade = _granade
 	holder = _holder
-	throw_dir = thrower.get_node("ThrowDirection");
+	throw_dir = Utils.FindNode("ThrowDirection");
 
 
 func Check():
 
 	if key.IsPressed():
-		if (Inventory.items.granade>0):
+		if (GameData.items.granade>0):
 			var gr = granade.instance()
-			gr.set_pos(throw_dir.get_global_pos())
+			gr.set_position(throw_dir.get_global_position())
 
-			var dir = Vector2(0,1).rotated( throw_dir.get_global_rot())*100
-			gr.apply_impulse(Vector2(0,0),dir)
+			#var dir = Vector2(0,1).rotated( throw_dir.get_global_rotation())*100
+			
+			var dir = throw_dir.get_parent().get_scale()* throw_dir.get_cast_to()*6.0
+			gr.apply_impulse(Vector2(10,-10),dir)   # <---- !!!!!
 			holder.add_child(gr)
-			Inventory.items.granade -= 1
+			GameData.items.granade -= 1
 			pass
 
 	pass

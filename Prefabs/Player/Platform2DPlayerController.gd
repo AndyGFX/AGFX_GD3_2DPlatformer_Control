@@ -5,7 +5,7 @@ var cMove = preload("res://Scripts/Movement/MovePlatformer.gd")
 var cInput = load("res://Scripts/Input/InputManager.gd")
 var cAnimState = preload("res://Scripts/Movement/AnimationState.gd")
 var cShooting = preload("res://Scripts/Attacks/Shooting.gd")
-#var cThrowing  = preload("res://Scripts/Attacks/Throwing.gd")
+var cThrowing  = preload("res://Scripts/Attacks/Throwing.gd")
 
 # exports to inspector
 export var playerMaxSpeed = 200
@@ -85,7 +85,7 @@ func _ready():
 
 	var fire_pivot = get_node("Body/FireOrigin_RIGHT")
 	fire = cShooting.new(move, key_fire,Globals.bullet_prefab,container,fire_pivot,false)
-	#throw = cThrowing.new(player,key_throw,Globals.granade_prefab,container)
+	throw = cThrowing.new(move,key_throw,Globals.granade_prefab,container)
 	
 
 	#disable rapid fire
@@ -148,7 +148,7 @@ func _physics_process(delta):
 	fire.Check()
 	
 	# check throwing
-	#throw.Check()
+	throw.Check()
 	
 	# update viewport position
 	#if move.inMotion: emit_signal("moveSignal")
