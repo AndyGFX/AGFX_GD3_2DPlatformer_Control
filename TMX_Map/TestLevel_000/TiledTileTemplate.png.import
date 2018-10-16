@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/TiledTileTemplate.png-6ef25db8d77471f4a316f2289c3fd4e3.stex"
+path="res://.import/TiledTileTemplate.png-0e888ae0241de1798039c444361a4da5.stex"
 
 [deps]
 
-source_file="res://TMX_Map/TiledTileTemplate.png"
-dest_files=[ "res://.import/TiledTileTemplate.png-6ef25db8d77471f4a316f2289c3fd4e3.stex" ]
+source_file="res://TMX_Map/TestLevel_000/TiledTileTemplate.png"
+dest_files=[ "res://.import/TiledTileTemplate.png-0e888ae0241de1798039c444361a4da5.stex" ]
 
 [params]
 
