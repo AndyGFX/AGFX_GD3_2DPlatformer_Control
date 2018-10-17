@@ -24,6 +24,7 @@
 - play animation
 - player facing by movement direction
 - save/load player gamedata to JSON
+- player start position and respawn
 - pickup coins
 - pickup ammo
 - pickup health

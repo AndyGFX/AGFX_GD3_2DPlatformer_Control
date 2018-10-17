@@ -22,7 +22,7 @@ custom_solver_bias = 0.0
 radius = 5.0
 height = 10.0
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 1
@@ -35,7 +35,7 @@ __meta__ = {
 }
 playerMaxSpeed = 200
 acceleration = 0.2
-jumpForce = 200
+jumpForce = 370
 jumpCount = 1
 
 [node name="Body" type="Node2D" parent="." index="0"]

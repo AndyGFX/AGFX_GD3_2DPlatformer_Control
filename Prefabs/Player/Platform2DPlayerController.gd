@@ -116,7 +116,7 @@ func _ready():
 	Globals.player_sfx = Utils.FindNode("SoundFXPlayer")
 
 	# respawn play at 'start_point'
-	#Respawn()
+	Respawn()
 
 	# Execute transition
 	# var transition = Utils.find_node("HUD").get_node("TransitionScreen")
@@ -128,7 +128,7 @@ func _ready():
 # Respawn player position on level start if exist entity GAME_PlayerStart in scene
 # -----------------------------------------------------------
 func Respawn():
-	var spawn_point = Utils.FindNode("PlayerStart")
+	var spawn_point = Utils.FindNode("StartPoint")
 	if spawn_point:
 		spawn_point.Respawn(self)
 
@@ -157,7 +157,7 @@ func _physics_process(delta):
 
 
 func _exit_tree():
-	#Inventory.Save();
+	GameData.Save();
 	pass
 
 # ---------------------------------------------------------
@@ -261,7 +261,4 @@ func _on_TriggerDetector_area_entered( area ):
 # 	Inventory.Add("health",-val);
 # 	move.Hurt(direction)
 
-
-func _exit_tree():
-	GameData.Save();
 
