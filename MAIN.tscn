@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://TMX_Map/TestLevel_000/TestLevel_000.tmx" type="PackedScene" id=1]
 [ext_resource path="res://Prefabs/Player/Player.tscn" type="PackedScene" id=2]
@@ -7,6 +7,9 @@
 [ext_resource path="res://Prefabs/HUD/HUD_Item_Info_COINS.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Prefabs/HUD/HUD_Item_Info_GRANADE.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Entities/Coin/Entity_Coin_0.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Entities/Ammo/Entity_Ammo_0.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Entities/Granade/Entity_Granade_0.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Entities/Health/Entity_Health_3.tscn" type="PackedScene" id=10]
 
 [node name="MAIN" type="Node" index="0"]
 
@@ -21,7 +24,6 @@ jumpForce = 300
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." index="2"]
 
-editor/display_folded = true
 layer = 1
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -61,5 +63,25 @@ margin_bottom = 90.0
 [node name="Coins_1" parent="Entities" index="0" instance=ExtResource( 7 )]
 
 position = Vector2( 118.729, 183.331 )
+
+[node name="Ammo" parent="Entities" index="1" instance=ExtResource( 8 )]
+
+position = Vector2( 201, 186 )
+
+[node name="Ammo2" parent="Entities" index="2" instance=ExtResource( 8 )]
+
+position = Vector2( 359, 186 )
+
+[node name="Granade 0" parent="Entities" index="3" instance=ExtResource( 9 )]
+
+position = Vector2( 440, 234 )
+
+[node name="Granade 1" parent="Entities" index="4" instance=ExtResource( 9 )]
+
+position = Vector2( 233, 250 )
+
+[node name="Health" parent="Entities" index="5" instance=ExtResource( 10 )]
+
+position = Vector2( 297, 187 )
 
 

@@ -105,9 +105,11 @@ func _ready():
 	# prepare inventory/gamedata to default values (remove when you need reset items amount)
 	
 	GameData.Set('coins',0)
-	GameData.Set('health',100)
+	GameData.Set('health',50)
 	GameData.Set('ammo',100)
 	GameData.Set('granade',9)
+	
+	#reset saved player game data
 	GameData.Save()
 
 	# get sound fx library for player
@@ -163,25 +165,25 @@ func _exit_tree():
 # ---------------------------------------------------------
 func _on_TriggerDetector_area_entered( area ):
 
-# | pickup COIN
-# -----------------------------------------------------
+	# | pickup COIN
+	# -----------------------------------------------------
 	if area.has_method('PickupCoin'): area.PickupCoin()
 
-# 	# | pickup AMMO
-# 	# -----------------------------------------------------
-# 	if area.has_method('PickupAmmo'): area.PickupAmmo()
+	# | pickup AMMO
+	# -----------------------------------------------------
+	if area.has_method('PickupAmmo'): area.PickupAmmo()
 
-# 	# | pickup GRANADE
-# 	# -----------------------------------------------------
-# 	if area.has_method('PickupGranade'): area.PickupGranade()
+	# | pickup GRANADE
+	# -----------------------------------------------------
+	if area.has_method('PickupGranade'): area.PickupGranade()
 	
 # 	# | pickup KEY
 # 	# -----------------------------------------------------
 # 	if area.has_method('PickupKey'): area.PickupKey()
 
-# 	# | pickup HEALTH
-# 	# -----------------------------------------------------
-# 	if area.has_method('PickupHealth'): area.PickupHealth()
+	# | pickup HEALTH
+	# -----------------------------------------------------
+	if area.has_method('PickupHealth'): area.PickupHealth()
 
 
 # 	# | show message info on enter trigger zone
@@ -260,4 +262,6 @@ func _on_TriggerDetector_area_entered( area ):
 # 	move.Hurt(direction)
 
 
+func _exit_tree():
+	GameData.Save();
 

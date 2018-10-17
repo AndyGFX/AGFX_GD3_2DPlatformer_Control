@@ -25,13 +25,12 @@
 - player facing by movement direction
 - save/load player gamedata to JSON
 - pickup coins
-
-# TODO
-
 - pickup ammo
 - pickup health
 - pickup granade
-- pickup coins
+
+# TODO
+
 - symple inventory system
 - create basic entities:
   - door
