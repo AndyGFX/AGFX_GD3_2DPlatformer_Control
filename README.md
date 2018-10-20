@@ -28,12 +28,13 @@
 - pickup coins
 - pickup ammo
 - pickup health
-- pickup granade
+- pickup grenade
+- basic entities:
+  - hazard (left, right, up, down) with hurt direction for player
 
 # TODO
 
-- symple inventory system
+- simple inventory system
 - create basic entities:
   - door
-  - hazard
   - enemies

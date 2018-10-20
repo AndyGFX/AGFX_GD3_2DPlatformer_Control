@@ -257,8 +257,3 @@ func _on_TriggerDetector_area_entered( area ):
 # 		msg_info.Hide()
 		
 
-# func Damage(val,direction):
-# 	Inventory.Add("health",-val);
-# 	move.Hurt(direction)
-
-
