@@ -25,7 +25,8 @@ var items = {};
 # GAME prefabs 
 # ---------------------------------------------------------------------------
 
-# teleport button info
+# info panels prefabs
+var msg_info_panel = preload("res://Prefabs/MessagePanel/MessageInfoPanel.tscn")
 
 # powerups
 

@@ -31,6 +31,7 @@
 - pickup grenade
 - basic entities:
   - hazard (left, right, up, down) with hurt direction for player
+  - InfoPanel (show message box with user defined text)
 
 # TODO
 

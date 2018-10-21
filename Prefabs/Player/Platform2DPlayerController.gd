@@ -98,9 +98,9 @@ func _ready():
 	#container.add_child(teleport_info)
 
 	# create message info panel instance
-	#msg_info = Globals.msg_info_panel.instance()
-	#msg_info.set_global_pos(Vector2(0,-5000))
-	#container.add_child(msg_info)
+	msg_info = Globals.msg_info_panel.instance()
+	msg_info.set_global_position(Vector2(0,-5000))
+	container.add_child(msg_info)
 	
 	# prepare inventory/gamedata to default values (remove when you need reset items amount)
 	
@@ -186,12 +186,12 @@ func _on_TriggerDetector_area_entered( area ):
 	if area.has_method('PickupHealth'): area.PickupHealth()
 
 
-# 	# | show message info on enter trigger zone
-# 	# -----------------------------------------------------
-# 	if area.has_method('EnterToMsgZone'):
-# 		msg_info.set_global_pos(area.get_global_pos()+area.panel_offset)
-# 		msg_info.Show(area.info_text)
-# 		area.EnterToMsgZone()
+	# | show message info on enter trigger zone
+	# -----------------------------------------------------
+	if area.has_method('EnterToMsgZone'):
+		msg_info.set_global_position(area.get_global_position()+area.panel_offset)
+		msg_info.Show(area.info_text)
+		area.EnterToMsgZone()
 
 # 	# | teleport to target door when player press 'key_up'
 # 	# -----------------------------------------------------
@@ -244,16 +244,15 @@ func _on_TriggerDetector_area_entered( area ):
  # ---------------------------------------------------------
  # ON EXIT TRIGGER callback for scene entities
  # ---------------------------------------------------------
-# func _on_TriggerDetector_area_exited(area):
-#	pass # replace with function body
+func _on_TriggerDetector_area_exited(area):
 
 # 	# reset teleport to target when player exit from area and key wasn't pressed
 # 	if area.has_method('ResetTeleport'):
 # 		teleport_info.Hide()
 # 		area.ResetTeleport()
 
-# 	# show message info on enter trigger zone
-# 	if area.has_method('ExitFromMsgZone'):
-# 		msg_info.Hide()
+	# show message info on enter trigger zone
+	if area.has_method("ExitFromMsgZone"):
+		msg_info.Hide()
 		
 

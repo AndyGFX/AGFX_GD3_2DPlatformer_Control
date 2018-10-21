@@ -148,4 +148,6 @@ _sections_unfolded = [ "Smoothing" ]
 
 [connection signal="area_entered" from="TriggerDetector" to="." method="_on_TriggerDetector_area_entered"]
 
+[connection signal="area_exited" from="TriggerDetector" to="." method="_on_TriggerDetector_area_exited"]
+
 
