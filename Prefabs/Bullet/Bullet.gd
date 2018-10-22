@@ -52,7 +52,8 @@ func create_explosion():
 # ---------------------------------------------------------
 func _on_area_enter(other):
 	if other.is_in_group("ENEMY"):
-		#create_explosion()
+		other.set_armor(self.DAMAGE)
+		create_explosion()
 		queue_free()
 	pass
 
@@ -64,11 +65,4 @@ func _on_body_enter(other):
 	if other.is_in_group("SOLID"):
 		create_explosion()
 		queue_free()
-		
-	if other.is_in_group("ENEMY"):
-		create_explosion()
-		other.ApplyDamage(self.DAMAGE)
-		
-		queue_free()
-		
 	pass  

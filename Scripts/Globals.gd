@@ -37,6 +37,20 @@ onready var granade_prefab = preload("res://Prefabs/Granade/Granade_0.tscn")
 # Sound FX player
 var player_sfx = null
 
+# show damage hit points
+const hit_point = preload("res://Prefabs/DamageHitPoints/DamageHitPoint.tscn")
+
+# ---------------------------------------------------------
+# Show flying hit points on enemy
+# ---------------------------------------------------------
+func ShowHitPoints(val,pos):
+	var container =  Utils.FindNode("Container")
+	var hit = hit_point.instance()
+	hit.get_node("Label").set_text(str(-val))	
+	hit.set_position(pos)
+	container.add_child(hit)
+	pass
+
 # ---------------------------------------------------------------------------
 # GAME Levels
 # ---------------------------------------------------------------------------
