@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/enemy_0.png-abdbb4d110434625bc8f778c8346d63c.stex"
+path="res://.import/enemy_1.png-d001a03ac140f025c3e2e7fbb97b2df1.stex"
 
 [deps]
 
-source_file="res://Entities/Enemies/MoveHorizontal/enemy_0.png"
-dest_files=[ "res://.import/enemy_0.png-abdbb4d110434625bc8f778c8346d63c.stex" ]
+source_file="res://Entities/Enemies/enemy_1.png"
+dest_files=[ "res://.import/enemy_1.png-d001a03ac140f025c3e2e7fbb97b2df1.stex" ]
 
 [params]
 

@@ -1,0 +1,16 @@
+[remap]
+
+importer="eska.aseprite_importer"
+type="PackedScene"
+path="res://.import/enemy_1.json-e60cbfd8726c09fe7fd6adc378407534.scn"
+
+[deps]
+
+source_file="res://Entities/Enemies/enemy_1.json"
+dest_files=[ "res://.import/enemy_1.json-e60cbfd8726c09fe7fd6adc378407534.scn" ]
+
+[params]
+
+sheet_image=""
+post_script=""
+autoplay_animation=""
