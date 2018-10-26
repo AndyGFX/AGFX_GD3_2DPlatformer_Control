@@ -40,6 +40,9 @@ var player_sfx = null
 # show damage hit points
 const hit_point = preload("res://Prefabs/DamageHitPoints/DamageHitPoint.tscn")
 
+#pickup animation
+const pickup_anim = preload("res://Prefabs/PickupItems/PickupAnimation/PickupItemAnimation.tscn")
+
 # ---------------------------------------------------------
 # Show flying hit points on enemy
 # ---------------------------------------------------------

@@ -44,4 +44,7 @@ func FindNode(node_name):
 func GetSceneRoot():
 	return get_tree().get_root()	
 
-
+func Instantiate(object,pos):
+	var _instance = object.instance()
+	_instance.set_position(pos)
+	Utils.FindNode("Container").add_child(_instance)
