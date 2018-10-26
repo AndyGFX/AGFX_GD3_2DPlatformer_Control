@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Prefabs/Player/Platform2DPlayerController.gd" type="Script" id=1]
 [ext_resource path="res://Animations/Player/Soso MASTER animation.json" type="PackedScene" id=2]
 [ext_resource path="res://Scripts/SoundFX/SFXManager.gd" type="Script" id=3]
 [ext_resource path="res://Sounds/Shoot1.wav" type="AudioStream" id=4]
 [ext_resource path="res://Sounds/Explosion3.wav" type="AudioStream" id=5]
+[ext_resource path="res://Sounds/Pickup1.wav" type="AudioStream" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -95,7 +96,6 @@ shape = SubResource( 3 )
 
 [node name="SoundFXPlayer" type="Node2D" parent="." index="4"]
 
-editor/display_folded = true
 script = ExtResource( 3 )
 
 [node name="Shoot1" type="AudioStreamPlayer2D" parent="SoundFXPlayer" index="0"]
@@ -119,6 +119,15 @@ max_distance = 2000.0
 attenuation = 1.0
 bus = "Master"
 area_mask = 1
+
+[node name="Pickup" type="AudioStreamPlayer" parent="SoundFXPlayer" index="2"]
+
+stream = ExtResource( 6 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
 
 [node name="Camera2D" type="Camera2D" parent="." index="5"]
 

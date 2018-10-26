@@ -16,4 +16,5 @@ func PickupGranade():
 	if !GameData: return	
 	GameData.Add(item_type,item_amount)
 	Utils.Instantiate(Globals.pickup_anim,get_global_position())
+	Globals.player_sfx.Play("Pickup")
 	queue_free()

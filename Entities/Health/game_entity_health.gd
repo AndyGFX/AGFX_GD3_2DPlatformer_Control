@@ -23,4 +23,5 @@ func PickupHealth():
 	
 	GameData.AddWithLimitCheck(item_type,item_amount,item_limit);
 	Utils.Instantiate(Globals.pickup_anim,get_global_position())
+	Globals.player_sfx.Play("Pickup")
 	queue_free()
