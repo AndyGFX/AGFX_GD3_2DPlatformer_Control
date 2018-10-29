@@ -28,7 +28,7 @@ var anim = null
 var fire = null
 var throw = null
 
-var teleport_info = null
+var btn_info = null
 var msg_info = null
 var container = null
 var throw_dir = null
@@ -93,9 +93,9 @@ func _ready():
 	fire.RapidFire(false)
 
 	# create teleport button info instance
-	#teleport_info = Globals.teleport_button_info.instance()
-	#teleport_info.set_global_pos(Vector2(0,-5000));
-	#container.add_child(teleport_info)
+	btn_info = Globals.btn_info_panel.instance()
+	btn_info.set_global_position(Vector2(0,-5000));
+	container.add_child(btn_info)
 
 	# create message info panel instance
 	msg_info = Globals.msg_info_panel.instance()
@@ -193,12 +193,12 @@ func _on_TriggerDetector_area_entered( area ):
 		msg_info.Show(area.info_text)
 		area.EnterToMsgZone()
 
-# 	# | teleport to target door when player press 'key_up'
-# 	# -----------------------------------------------------
-# 	if area.has_method('Teleport'):
-# 		teleport_info.set_global_pos(area.get_global_pos())
-# 		teleport_info.Show()
-# 		area.Teleport(player)
+	# | teleport to target door when player press 'key_up'
+	# -----------------------------------------------------
+	if area.has_method('Teleport'):
+		btn_info.set_global_position(area.get_global_position())
+		btn_info.Show()
+		area.Teleport(player)
 
 # 	# | Pickup timelimited jump force
 # 	# -----------------------------------------------------
@@ -246,10 +246,10 @@ func _on_TriggerDetector_area_entered( area ):
  # ---------------------------------------------------------
 func _on_TriggerDetector_area_exited(area):
 
-# 	# reset teleport to target when player exit from area and key wasn't pressed
-# 	if area.has_method('ResetTeleport'):
-# 		teleport_info.Hide()
-# 		area.ResetTeleport()
+	# reset teleport to target when player exit from area and key wasn't pressed
+	if area.has_method('ResetTeleport'):
+		btn_info.Hide()
+		area.ResetTeleport()
 
 	# show message info on enter trigger zone
 	if area.has_method("ExitFromMsgZone"):

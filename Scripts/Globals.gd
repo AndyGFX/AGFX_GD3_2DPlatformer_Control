@@ -27,6 +27,7 @@ var items = {};
 
 # info panels prefabs
 var msg_info_panel = preload("res://Prefabs/MessagePanel/MessageInfoPanel.tscn")
+var btn_info_panel = preload("res://Prefabs/PressButtonPanel/ButtonPressPanel.tscn")
 
 # powerups
 

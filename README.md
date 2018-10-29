@@ -32,10 +32,10 @@
 - basic entities:
   - hazard (left, right, up, down) with hurt direction for player
   - InfoPanel (show message box with user defined text)
+  - Door and move player to targe podition (next door with spawnPosition)
+- simple inventory system
 
 # TODO
 
-- simple inventory system
 - create basic entities:
-  - door
   - enemies
