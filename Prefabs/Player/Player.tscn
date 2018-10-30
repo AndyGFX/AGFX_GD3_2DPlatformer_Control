@@ -23,7 +23,7 @@ custom_solver_bias = 0.0
 radius = 5.0
 height = 10.0
 
-[node name="Player" type="KinematicBody2D" index="0"]
+[node name="Player" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 1
@@ -41,6 +41,7 @@ jumpCount = 1
 
 [node name="Body" type="Node2D" parent="." index="0"]
 
+editor/display_folded = true
 _sections_unfolded = [ "Transform" ]
 
 [node name="PlayerAnimation" parent="Body" index="0" instance=ExtResource( 2 )]
@@ -96,6 +97,7 @@ shape = SubResource( 3 )
 
 [node name="SoundFXPlayer" type="Node2D" parent="." index="4"]
 
+editor/display_folded = true
 script = ExtResource( 3 )
 
 [node name="Shoot1" type="AudioStreamPlayer2D" parent="SoundFXPlayer" index="0"]
