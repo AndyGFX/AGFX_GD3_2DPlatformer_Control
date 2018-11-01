@@ -9,8 +9,6 @@ const scn_explosion = [
 
 
 var enemy = null;
-var rayLeft = null;
-var rayRight = null;
 var animPlayer = null;
 var current_animation = ""
 
@@ -25,9 +23,7 @@ export var hurt_direction = Vector2(0,-10)
 # ---------------------------------------------------------
 func _ready():
 
-	enemy = get_node(".")
-	rayLeft = $CastLeft
-	rayRight = $CastRight
+	enemy = get_node(".")	
 	animPlayer = $Enemy/AnimationPlayer;
 	add_to_group("ENEMY")
 	connect("area_entered", self, "_on_area_enter")
@@ -73,16 +69,14 @@ func _on_body_enter(body):
 # ---------------------------------------------------------
 func _physics_process(delta):
 
-	if velocity.x!=0:
+	if velocity.y!=0:
 		#switch move to left
-		if (rayLeft.is_colliding() and !rayRight.is_colliding()):
-			velocity.x = -velocity.x
-			$Enemy/Sprite.set_scale(Vector2(-1,1))
+		if ($CastUp.is_colliding() and !$CastDown.is_colliding()):
+			velocity.y = -velocity.y
 
 		#switch move to right
-		if (!rayLeft.is_colliding() and rayRight.is_colliding()):
-			velocity.x = -velocity.x
-			$Enemy/Sprite.set_scale(Vector2(1,1))
+		if (!$CastUp.is_colliding() and $CastDown.is_colliding()):
+			velocity.y = -velocity.y
 
 	translate(velocity * delta)
 
@@ -112,7 +106,7 @@ func PlayAnimation(anim_name):
 # Start enemy movement
 # ---------------------------------------------------------
 func Start():
-	velocity.x = speed
+	velocity.y = speed
 	PlayAnimation("Walk")
 
 # ---------------------------------------------------------
