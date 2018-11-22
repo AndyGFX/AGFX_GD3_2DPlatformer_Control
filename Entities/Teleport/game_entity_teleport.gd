@@ -32,12 +32,24 @@ func ResetTeleport():
 	print("btn stop")
 	_enabled_btn_check = false
 
+#------------------------------------------------
+# MAIN Loop
+#------------------------------------------------
 func _process(delta):
-	
+	update()
 	if Input.is_action_pressed(on_button) and _enabled_btn_check:
 		_enabled_btn_check = false
 		var target_node = Utils.FindNode(target_name)
 		var target_pos = target_node.get_node("SpawnPosition")
 		var pos = target_pos.get_global_position()
 		eventOwner.set_position(pos)
+	pass
+	
+#------------------------------------------------
+# Draw portal connection
+#------------------------------------------------
+func _draw():
+	var obj = Utils.FindNode(self.target_name)
+	if obj:
+		draw_line(self.position,obj.position,Color(0,1,0,1))
 	pass

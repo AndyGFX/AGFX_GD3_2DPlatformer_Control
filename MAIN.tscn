@@ -28,8 +28,6 @@
 
 [node name="Entities" type="Node2D" parent="." index="1"]
 
-editor/display_folded = true
-
 [node name="Enemy_H_movement" parent="Entities" index="0" instance=ExtResource( 2 )]
 
 position = Vector2( 472, 88 )
@@ -90,14 +88,10 @@ panel_offset = Vector2( -10, -54 )
 [node name="DOOR_A" parent="Entities" index="13" instance=ExtResource( 13 )]
 
 position = Vector2( 971, 129 )
-source_name = "DOOR_A"
-target_name = "DOOR_B"
 
 [node name="DOOR_B" parent="Entities" index="14" instance=ExtResource( 13 )]
 
 position = Vector2( 1467, 177 )
-source_name = "DOOR_B"
-target_name = "DOOR_A"
 
 [node name="Enemy_V_movement" parent="Entities" index="15" instance=ExtResource( 14 )]
 
