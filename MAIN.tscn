@@ -88,10 +88,12 @@ panel_offset = Vector2( -10, -54 )
 [node name="DOOR_A" parent="Entities" index="13" instance=ExtResource( 13 )]
 
 position = Vector2( 971, 129 )
+target_name = "DOOR_B"
 
 [node name="DOOR_B" parent="Entities" index="14" instance=ExtResource( 13 )]
 
 position = Vector2( 1467, 177 )
+target_name = "DOOR_A"
 
 [node name="Enemy_V_movement" parent="Entities" index="15" instance=ExtResource( 14 )]
 
@@ -109,7 +111,6 @@ jumpForce = 380
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." index="3"]
 
-editor/display_folded = true
 layer = 1
 offset = Vector2( 0, 0 )
 rotation = 0.0
