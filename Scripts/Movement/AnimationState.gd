@@ -14,10 +14,11 @@ func _init(anim):
 # -----------------------------------------------------------
 func GetState(moveControl):
 
-	var inMove = moveControl.velocity.x!=0;
-
+	
+	print(moveControl.inMotion)
+	
 	# if is in move
-	if inMove:
+	if moveControl.inMotion:
 		# RIGHT 
 		if moveControl.velocity.x > 0:
 			# => set sprite orientation to RIGTH

@@ -129,7 +129,10 @@ func Apply(delta):
 		jumping = false
 		inHurt = false
 
-	if velocity.y!=0 or velocity.x != 0: inMotion = true;
+	#if velocity.y!=0 or velocity.x != 0: inMotion = true;
+	if abs(velocity.y)>0.00001 or abs(velocity.x) > 0.0001: inMotion = true;
+	print(velocity.x)
+	
 	
 	
 

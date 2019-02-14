@@ -1,6 +1,6 @@
 [remap]
 
-importer="eska.aseprite_importer"
+importer="vnen.tiled_importer"
 type="PackedScene"
 valid=false
 
@@ -9,6 +9,12 @@ valid=false
 source_file="res://gamedata.json"
 [params]
 
-sheet_image=""
-post_script=""
-autoplay_animation=""
+custom_properties=true
+tile_metadata=false
+uv_clip=true
+image_flags=7
+collision_layer=1
+embed_internal_images=false
+save_tiled_properties=false
+add_background=true
+post_import_script=""
