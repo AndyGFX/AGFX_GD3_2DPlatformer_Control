@@ -107,6 +107,9 @@ func Apply(delta):
 	movement*=speed
 
 	velocity.x = lerp(velocity.x, movement, accel)
+	
+	if (abs(velocity.x)<1):
+		velocity.x = 0
 
 #	var floor_velocity = object.get_floor_velocity()
 #	if (floor_velocity != Vector2(0,0)):
@@ -130,12 +133,9 @@ func Apply(delta):
 		inHurt = false
 
 	#if velocity.y!=0 or velocity.x != 0: inMotion = true;
-	if abs(velocity.y)>0.00001 or abs(velocity.x) > 0.0001: inMotion = true;
-	print(velocity.x)
+	if abs(velocity.y)>0.1 or abs(velocity.x) > 0.1: inMotion = true;
 	
 	
-	
-
 # -----------------------------------------------------------
 # Get last velocity vector
 # -----------------------------------------------------------

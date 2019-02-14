@@ -13,9 +13,6 @@ func _init(anim):
 # Check and return animation state from movement controller
 # -----------------------------------------------------------
 func GetState(moveControl):
-
-	
-	print(moveControl.inMotion)
 	
 	# if is in move
 	if moveControl.inMotion:
