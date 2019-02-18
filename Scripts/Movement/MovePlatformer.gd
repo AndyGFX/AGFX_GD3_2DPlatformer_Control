@@ -111,9 +111,7 @@ func Apply(delta):
 	if (abs(velocity.x)<1):
 		velocity.x = 0
 
-#	var floor_velocity = object.get_floor_velocity()
-#	if (floor_velocity != Vector2(0,0)):
-#		object.move_and_collide(floor_velocity*delta)
+		
 		
 	velocity = object.move_and_slide(velocity,FLOOR_NORMAL,SLOPE_FRICTION)
 	
@@ -121,7 +119,7 @@ func Apply(delta):
 
 	if(isOnGround):
 		_jump_count = 0
-
+	
 	# Apply jump force on key pressed when is enabled
 	if key_3.IsPressed() and _jump_count<max_jump_count:
 		jumping = true
