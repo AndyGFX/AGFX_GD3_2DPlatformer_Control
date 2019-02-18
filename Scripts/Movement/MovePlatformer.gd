@@ -114,7 +114,7 @@ func Apply(delta):
 #	var floor_velocity = object.get_floor_velocity()
 #	if (floor_velocity != Vector2(0,0)):
 #		object.move_and_collide(floor_velocity*delta)
-	
+		
 	velocity = object.move_and_slide(velocity,FLOOR_NORMAL,SLOPE_FRICTION)
 	
 	isOnGround = object.is_on_floor()
@@ -133,7 +133,7 @@ func Apply(delta):
 		inHurt = false
 
 	#if velocity.y!=0 or velocity.x != 0: inMotion = true;
-	if abs(velocity.y)>0.1 or abs(velocity.x) > 0.1: inMotion = true;
+	if abs(velocity.y)>1 or abs(velocity.x) > 1: inMotion = true;
 	
 	
 # -----------------------------------------------------------
