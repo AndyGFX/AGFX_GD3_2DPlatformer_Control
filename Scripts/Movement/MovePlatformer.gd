@@ -13,6 +13,11 @@ var velocity = Vector2()
 var facing = Globals.eFacing.TO_RIGHT
 
 # -----------------------------------------------------------
+# Wall sliding properties
+# -----------------------------------------------------------
+var wallSlideSpeed = 0.5
+
+# -----------------------------------------------------------
 # Jumping properties
 # -----------------------------------------------------------
 var world_gravity = Vector2(0,1000)
@@ -24,6 +29,7 @@ var max_jump_count = 2
 # Movement states
 # -----------------------------------------------------------
 var isOnGround = false
+var isOnWall = false
 var inMotion = false
 var inCrunch = false
 var inHurt = false
@@ -104,10 +110,17 @@ func Apply(delta):
 			_shape_walk.disabled=false
 			_shape_crunch.disabled=true
 
-	movement*=speed
 
-	velocity.x = lerp(velocity.x, movement, accel)
+	isOnGround = object.is_on_floor()
+	isOnWall = object.is_on_wall()
 	
+	movement*=speed
+		
+	velocity.x = lerp(velocity.x, movement, accel)
+
+	if (isOnWall and !isOnGround):
+		velocity.y = velocity.y * wallSlideSpeed
+			
 	if (abs(velocity.x)<1):
 		velocity.x = 0
 
@@ -117,18 +130,27 @@ func Apply(delta):
 	
 	velocity = object.move_and_slide(velocity,FLOOR_NORMAL,SLOPE_FRICTION)
 	
-	isOnGround = object.is_on_floor()
-
+	
+	
+	
 	if(isOnGround):
 		_jump_count = 0
 
-	# Apply jump force on key pressed when is enabled
-	if key_3.IsPressed() and _jump_count<max_jump_count:
-		jumping = true
-		velocity.y -= jumpForce
-		_jump_count += 1
 
-	if velocity.y > 0:
+	if isOnWall:
+		# Apply jump force on key pressed when is enabled on WALL
+		if key_3.IsPressed():
+			jumping = true
+			velocity.y -= jumpForce*2.0
+	else:
+		# Apply jump force on key pressed when is enabled on GROUND
+		if key_3.IsPressed() and _jump_count<max_jump_count:
+			jumping = true
+			velocity.y -= jumpForce
+			_jump_count += 1
+
+	
+	if (velocity.y > 0 and isOnWall==false):
 		jumping = false
 		inHurt = false
 
