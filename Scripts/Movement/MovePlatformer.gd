@@ -110,7 +110,7 @@ func Apply(delta):
 			_shape_walk.disabled=false
 			_shape_crunch.disabled=true
 
-
+ 
 	isOnGround = object.is_on_floor()
 	isOnWall = object.is_on_wall()
 	
