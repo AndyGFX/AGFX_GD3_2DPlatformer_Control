@@ -326,14 +326,22 @@
     "spriteSourceSize": { "x": 0, "y": 0, "w": 32, "h": 32 },
     "sourceSize": { "w": 32, "h": 32 },
     "duration": 100
+   },
+   "Soso MASTER animation 41.ase": {
+    "frame": { "x": 1312, "y": 0, "w": 32, "h": 32 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 32, "h": 32 },
+    "sourceSize": { "w": 32, "h": 32 },
+    "duration": 250
    }
  },
  "meta": {
   "app": "http://www.aseprite.org/",
-  "version": "1.2.3-x64",
-  "image": "E:\\AGFX_Development\\AGFX_Art&Design\\2017\\Sisi and Soso\\Images\\Soso MASTER animation.png",
+  "version": "1.2.10-beta4-x64",
+  "image": "E:\\_GITHUB_\\GD3_2DPlatformer_Control\\Animations\\Player\\Soso MASTER animation.png",
   "format": "I8",
-  "size": { "w": 1312, "h": 32 },
+  "size": { "w": 1344, "h": 32 },
   "scale": "1",
   "frameTags": [
    { "name": "Idle", "from": 0, "to": 6, "direction": "forward" },
@@ -344,7 +352,8 @@
    { "name": "Hurt", "from": 28, "to": 34, "direction": "forward" },
    { "name": "Obstacle", "from": 35, "to": 35, "direction": "forward" },
    { "name": "CrunchWalk", "from": 36, "to": 39, "direction": "forward" },
-   { "name": "Crunch", "from": 40, "to": 40, "direction": "forward" }
+   { "name": "Crunch", "from": 40, "to": 40, "direction": "forward" },
+   { "name": "WallSlide", "from": 41, "to": 41, "direction": "forward" }
   ],
   "layers": [
    { "name": "JetPack", "opacity": 255, "blendMode": "normal" },
@@ -355,8 +364,6 @@
    { "name": "Foot-Front", "opacity": 255, "blendMode": "normal" },
    { "name": "Weapon", "opacity": 255, "blendMode": "normal" },
    { "name": "Hand-Front", "opacity": 255, "blendMode": "normal" }
-  ],
-  "slices": [
   ]
  }
 }
