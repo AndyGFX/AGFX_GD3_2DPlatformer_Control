@@ -14,7 +14,7 @@ func _init(anim):
 # -----------------------------------------------------------
 func GetState(moveControl):
 	
-	# if is in move
+	# if is in move FLIP PLAYER
 	if moveControl.inMotion:
 		# RIGHT 
 		if moveControl.velocity.x > 0:
@@ -26,8 +26,10 @@ func GetState(moveControl):
 			moveControl.object.get_child(0).set_scale(Vector2(-1,1))
 			
 	
+	# Set animation 
+	
 	if moveControl.isOnGround:
-		if moveControl.velocity.x!=0:
+		if abs(moveControl.velocity.x)>1:
 			if !moveControl.object.is_on_wall():
 				if moveControl.inCrunch:
 					animation_state = Globals.eAnimState.CRUNCHWALK
