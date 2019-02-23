@@ -9,7 +9,7 @@ enum eDirection { IDLE = 0,TO_LEFT = -1, TO_RIGHT=1, TO_UP = -1, TO_DOWN = 1 }
 #enum eActionState { FIRE, THROW, STAB, USE }
 
 # Animation state
-enum eAnimState { IDLE, WALK, JUMP, FALL, DIE, HURT, CLIMB, OBSTACLE, CRUNCH, CRUNCHWALK }
+enum eAnimState { IDLE, WALK, JUMP, FALL, DIE, HURT, CLIMB, OBSTACLE, CRUNCH, CRUNCHWALK, WALLSLIDE }
 
 # screen transition mode
 enum eTransitionMode { NONE,TO_BLACK,TO_TRANSPARENT}
