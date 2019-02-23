@@ -42,7 +42,10 @@ func GetState(moveControl):
 				animation_state = Globals.eAnimState.IDLE
 	else:
 		if moveControl.velocity.y>0:
-			animation_state = Globals.eAnimState.FALL
+			if moveControl.isOnWall:
+				animation_state = Globals.eAnimState.WALLSLIDE
+			else:
+				animation_state = Globals.eAnimState.FALL
 			
 	if moveControl.jumping and moveControl.velocity.y<0: 
 		animation_state = Globals.eAnimState.JUMP
@@ -63,6 +66,7 @@ func Play(state):
 	if state==Globals.eAnimState.FALL: _anim_name = "Fall"
 	if state==Globals.eAnimState.HURT: _anim_name = "Hurt"
 	if state==Globals.eAnimState.CRUNCH: _anim_name = "Crunch"
+	if state==Globals.eAnimState.WALLSLIDE: _anim_name = "WallSlide"
 	if state==Globals.eAnimState.CRUNCHWALK: _anim_name = "CrunchWalk"
 	
 	if current_animation != animation_state:
