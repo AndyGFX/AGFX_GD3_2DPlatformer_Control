@@ -1,0 +1,20 @@
+[remap]
+
+importer="vnen.tiled_tileset_importer"
+type="TileSet"
+path="res://.import/Objects.tsx-5bea59e3c2e62e624421f227a5d6f59d.res"
+
+[deps]
+
+source_file="res://TMX_Map/TestLevel_000/Objects.tsx"
+dest_files=[ "res://.import/Objects.tsx-5bea59e3c2e62e624421f227a5d6f59d.res" ]
+
+[params]
+
+custom_properties=true
+tile_metadata=false
+image_flags=7
+embed_internal_images=false
+save_tiled_properties=false
+apply_offset=false
+post_import_script=""
