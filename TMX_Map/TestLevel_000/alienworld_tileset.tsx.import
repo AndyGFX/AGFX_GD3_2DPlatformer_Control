@@ -2,13 +2,11 @@
 
 importer="vnen.tiled_tileset_importer"
 type="TileSet"
-path="res://.import/alienworld_tileset.tsx-6d40a14d9ba488fcb37a688fc91932e5.res"
+valid=false
 
 [deps]
 
 source_file="res://TMX_Map/TestLevel_000/alienworld_tileset.tsx"
-dest_files=[ "res://.import/alienworld_tileset.tsx-6d40a14d9ba488fcb37a688fc91932e5.res" ]
-
 [params]
 
 custom_properties=true
@@ -17,4 +15,4 @@ image_flags=7
 embed_internal_images=false
 save_tiled_properties=false
 apply_offset=false
-post_import_script=""
+post_import_script="res://TMX_Map/POST_TMX.gd"
