@@ -27,6 +27,7 @@
 [node name="TestLevel_000" parent="." instance=ExtResource( 1 )]
 
 [node name="Entities" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="Enemy_H_movement" parent="Entities" instance=ExtResource( 2 )]
 position = Vector2( 472, 88 )
@@ -90,6 +91,7 @@ position = Vector2( 247.483, 99.1266 )
 jumpForce = 380
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+editor/display_folded = true
 
 [node name="HUD_Item_Info-HEALTH" parent="CanvasLayer" instance=ExtResource( 17 )]
 margin_left = 9.0

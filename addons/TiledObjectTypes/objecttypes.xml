@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objecttypes>
+ <objecttype name="Door" color="#00ff00">
+  <property name="Name" type="string" default="none"/>
+  <property name="Target" type="string" default="none"/>
+ </objecttype>
+ <objecttype name="DoorWithKey" color="#a0a0a4">
+  <property name="KeyName" type="string" default="none"/>
+  <property name="Name" type="string" default="none"/>
+  <property name="Target" type="string" default="none"/>
+ </objecttype>
+ <objecttype name="ITEM-Ammo" color="#55ffff">
+  <property name="Amount" type="int" default="25"/>
+ </objecttype>
+ <objecttype name="ITEM-Diamod" color="#ffaa00">
+  <property name="Amount" type="int" default="1"/>
+ </objecttype>
+ <objecttype name="ITEM-Grenade" color="#00aaff">
+  <property name="Amount" type="int" default="5"/>
+ </objecttype>
+ <objecttype name="ITEM-Health" color="#ff0000">
+  <property name="Amount" type="int" default="25"/>
+ </objecttype>
+ <objecttype name="MSG-Panel" color="#aa5500">
+  <property name="Test" type="string" default="MSG box text"/>
+ </objecttype>
+</objecttypes>

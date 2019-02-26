@@ -15,7 +15,14 @@ func post_import(scene):
 				if type == "SOLID": node.add_to_group("SOLID",true)
 			if node.has_meta("Z index"):
 				node.z_index = int(node.get_meta("Z index"))
-
+		elif node is Node2D:
+			for object in node.get_children():
+				# Assume all objects have a custom property named "type" and get its value
+				var type = object.get_meta("type")
+				print(type)
+			pass
+			
+			
 
 	print("... done")
 	# You must return the modified scene
