@@ -565,6 +565,13 @@ func make_layer(layer, parent, root, data):
 
 				if options.save_tiled_properties:
 					set_tiled_properties_as_meta(obj_root, object)
+				
+				print(object)
+				
+				if "type" in object:
+					print(object.type)
+					obj_root.set_meta("type",object.type)
+					
 				if options.custom_properties:
 					if options.tile_metadata:
 						var tile_meta = tileset.get_meta("tile_meta")
