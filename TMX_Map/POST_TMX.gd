@@ -27,8 +27,10 @@ func post_import(scene):
 			for object in node.get_children():
 				print("- Object|"+object.name)
 				# Assume all objects have a custom property named "type" and get its value
-				var type = object.get_meta_list()
-				print(type)
+				
+				if object.has_meta("Type"):
+					var type = object.get_meta("Type")
+					print(type)
 				
 			pass
 			

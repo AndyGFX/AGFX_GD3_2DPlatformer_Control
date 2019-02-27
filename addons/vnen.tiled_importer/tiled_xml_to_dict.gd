@@ -171,9 +171,10 @@ func parse_tileset(parser):
 					tile_data.erase("tilepropertytypes")
 				
 				# AGFX here add type to properties
-				if "type" in attr:
-					print(attr.type)
-									
+#				if "type" in attr:
+#					print(attr)
+					
+					
 				data.tiles[str(attr.id)] = tile_data
 					
 					

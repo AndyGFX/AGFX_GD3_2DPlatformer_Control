@@ -1,27 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objecttypes>
  <objecttype name="Door" color="#00ff00">
+  <property name="PrefabName" type="string" default="&lt;PrefabName&gt;"/>	
   <property name="Name" type="string" default="none"/>
+  <property name="PrefabName" type="string" default="&lt;PrefabName&gt;"/>
   <property name="Target" type="string" default="none"/>
+  <property name="Type" type="string" default="Teleport"/>
  </objecttype>
  <objecttype name="DoorWithKey" color="#a0a0a4">
+  <property name="PrefabName" type="string" default="&lt;PrefabName&gt;"/>
   <property name="KeyName" type="string" default="none"/>
   <property name="Name" type="string" default="none"/>
   <property name="Target" type="string" default="none"/>
+  <property name="Type" type="string" default="TeleportWithKey"/>
  </objecttype>
  <objecttype name="ITEM-Ammo" color="#55ffff">
+  <property name="PrefabName" type="string" default="&lt;PrefabName&gt;"/>
   <property name="Amount" type="int" default="25"/>
+  <property name="Type" type="string" default="Ammo"/>
  </objecttype>
  <objecttype name="ITEM-Diamod" color="#ffaa00">
+  <property name="PrefabName" type="string" default="&lt;PrefabName&gt;"/>
   <property name="Amount" type="int" default="1"/>
+  <property name="Type" type="string" default="Diamond "/>
  </objecttype>
  <objecttype name="ITEM-Grenade" color="#00aaff">
+  <property name="PrefabName" type="string" default="&lt;PrefabName&gt;"/>
   <property name="Amount" type="int" default="5"/>
+  <property name="Type" type="string" default="Grenade "/>
  </objecttype>
  <objecttype name="ITEM-Health" color="#ff0000">
+  <property name="PrefabName" type="string" default="&lt;PrefabName&gt;"/>
   <property name="Amount" type="int" default="25"/>
+  <property name="Type" type="string" default="Helath "/>
  </objecttype>
  <objecttype name="MSG-Panel" color="#aa5500">
+  <property name="PrefabName" type="string" default="&lt;PrefabName&gt;"/>
   <property name="Test" type="string" default="MSG box text"/>
+  <property name="Type" type="string" default="Info "/>
  </objecttype>
 </objecttypes>
