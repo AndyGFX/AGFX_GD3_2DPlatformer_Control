@@ -14,6 +14,7 @@ enum eAnimState { IDLE, WALK, JUMP, FALL, DIE, HURT, CLIMB, OBSTACLE, CRUNCH, CR
 # screen transition mode
 enum eTransitionMode { NONE,TO_BLACK,TO_TRANSPARENT}
 
+
 # ---------------------------------------------------------------------------
 # GAME data
 # ---------------------------------------------------------------------------
