@@ -38,6 +38,7 @@ func _ready():
 
 func CreateInstance(scene,object,name,pos):
 	var _instance = object.instance()
+	_instance.name = name
 	_instance.set_position(pos + Vector2(16, -16))	
 	#var container = scene.get_root.find_node("Entities", true, false)
 	self.root_entities.add_child(_instance)
