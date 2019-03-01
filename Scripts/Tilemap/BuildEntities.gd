@@ -10,7 +10,7 @@ func _ready():
 	
 	self.root_entities = Utils.FindNode("Entities")
 	
-	print("Post-process: build entities inscene in runtime mode ... ")
+	print("Post-process: build entities in scene at runtime ... ")
 	var scene = Utils.FindNode(self.name)
 	
 	for node in scene.get_children():
@@ -24,11 +24,13 @@ func _ready():
 
 					match type:
 						"health":
-							Create_health(scene,object)
-#						"ammo": 
-#							Create_ammo(scene,object)
-#						"granade":
-#							Create_granade(scene,object)
+							Create_health(object)
+						"ammo": 
+							Create_ammo(object)
+						"granade":							
+							Create_granade(object)
+						"coin":
+							Create_coin(object)							
 #						"panel":
 #							Create_panel(scene,object)
 #						"teleport":
@@ -36,18 +38,38 @@ func _ready():
 
 				pass
 
-func CreateInstance(scene,object,name,pos):
+func CreateInstance(object,name,pos):
+	
 	var _instance = object.instance()
 	_instance.name = name
-	_instance.set_position(pos + Vector2(16, -16))	
-	#var container = scene.get_root.find_node("Entities", true, false)
+	_instance.set_position(pos + Vector2(8, -8))	
 	self.root_entities.add_child(_instance)
 	_instance.set_owner(self.root_entities)
+	return _instance
 	
+func CreateEntity(obj):
 	
-func Create_health(scene,obj):
-	print("- Entity|"+obj.name+" type: "+obj.get_meta("Type"))
-	var prefab_health = load(obj.get_meta("PrefabName"))
-	var health = CreateInstance(scene,prefab_health,"Health #"+obj.name,obj.get_position())
-	pass
+	var entity_prefab = load(obj.get_meta("PrefabName"))
+	var entity_name = obj.get_meta("Name")+"("+obj.name+")"
+	var entity_pos = obj.get_position()
+	return CreateInstance(entity_prefab,entity_name,entity_pos)
 	
+func Create_health(obj):
+
+	var entity = CreateEntity(obj)
+	entity.item_amount = obj.get_meta("Amount")
+	
+func Create_ammo(obj):
+
+	var entity = CreateEntity(obj)
+	entity.item_amount = obj.get_meta("Amount")
+	
+func Create_granade(obj):
+
+	var entity = CreateEntity(obj)
+	entity.item_amount = obj.get_meta("Amount")	
+	
+func Create_coin(obj):
+
+	var entity = CreateEntity(obj)
+	entity.item_amount = obj.get_meta("Amount")	

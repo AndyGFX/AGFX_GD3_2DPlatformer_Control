@@ -14,6 +14,7 @@
 [node name="MAIN" type="Node"]
 
 [node name="TestLevel_000" parent="." instance=ExtResource( 1 )]
+position = Vector2( 0, -0.250343 )
 script = ExtResource( 2 )
 
 [node name="Entities" type="Node2D" parent="."]

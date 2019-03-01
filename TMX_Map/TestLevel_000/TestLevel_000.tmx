@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.2" tiledversion="2018.11.13" orientation="orthogonal" renderorder="right-down" width="100" height="30" tilewidth="16" tileheight="16" infinite="0" nextlayerid="4" nextobjectid="20">
+<map version="1.2" tiledversion="2018.11.13" orientation="orthogonal" renderorder="right-down" width="100" height="30" tilewidth="16" tileheight="16" infinite="0" nextlayerid="4" nextobjectid="23">
  <tileset firstgid="1" source="Autotiles.tsx"/>
  <tileset firstgid="49" source="Objects.tsx"/>
  <layer id="1" name="Background" width="100" height="30" locked="1">
@@ -36,7 +36,7 @@
 40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40,40
 </data>
  </layer>
- <objectgroup id="3" name="GameItems">
+ <objectgroup id="3" name="GameItems" visible="0">
   <object id="9" gid="73" x="1216" y="144" width="16" height="16">
    <properties>
     <property name="Name" value="Door-A"/>
@@ -61,7 +61,7 @@
     <property name="Type" value="panel"/>
    </properties>
   </object>
-  <object id="12" gid="49" x="848" y="144" width="16" height="16">
+  <object id="12" gid="49" x="608" y="96" width="16" height="16">
    <properties>
     <property name="Amount" type="int" value="25"/>
     <property name="Name" value="Health-25"/>
@@ -69,7 +69,7 @@
     <property name="Type" value="health"/>
    </properties>
   </object>
-  <object id="18" gid="49" x="866" y="130" width="16" height="16">
+  <object id="18" gid="49" x="640" y="96" width="16" height="16">
    <properties>
     <property name="Amount" type="int" value="25"/>
     <property name="Name" value="Health-25"/>
@@ -77,12 +77,36 @@
     <property name="Type" value="health"/>
    </properties>
   </object>
-  <object id="19" gid="49" x="890" y="120" width="16" height="16">
+  <object id="19" gid="49" x="672" y="96" width="16" height="16">
    <properties>
     <property name="Amount" type="int" value="25"/>
     <property name="Name" value="Health-25"/>
     <property name="PrefabName" value="res://Entities/Health/Entity_Health_3.tscn"/>
     <property name="Type" value="health"/>
+   </properties>
+  </object>
+  <object id="20" gid="53" x="192" y="192" width="16" height="16">
+   <properties>
+    <property name="Amount" type="int" value="10"/>
+    <property name="Name" value="Ammo-10"/>
+    <property name="PrefabName" value="res://Entities/Ammo/Entity_Ammo_0.tscn"/>
+    <property name="Type" value="ammo"/>
+   </properties>
+  </object>
+  <object id="21" gid="57" x="258" y="192" width="16" height="16">
+   <properties>
+    <property name="Amount" type="int" value="1"/>
+    <property name="Name" value="Diamond"/>
+    <property name="PrefabName" value="res://Entities/Coin/Entity_Coin_0.tscn"/>
+    <property name="Type" value="coin"/>
+   </properties>
+  </object>
+  <object id="22" gid="61" x="321" y="192" width="16" height="16">
+   <properties>
+    <property name="Amount" type="int" value="5"/>
+    <property name="Name" value="Granade-5"/>
+    <property name="PrefabName" value="res://Entities/Granade/Entity_Granade_0.tscn"/>
+    <property name="Type" value="granade"/>
    </properties>
   </object>
  </objectgroup>

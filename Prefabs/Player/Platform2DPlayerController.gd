@@ -184,6 +184,7 @@ func _on_TriggerDetector_area_entered( area ):
 	# | pickup HEALTH
 	# -----------------------------------------------------
 	if area.has_method('PickupHealth'): area.PickupHealth()
+		
 
 
 	# | show message info on enter trigger zone
