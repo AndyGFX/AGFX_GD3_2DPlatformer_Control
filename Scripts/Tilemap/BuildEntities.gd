@@ -5,9 +5,20 @@ extends Node
 # var b = "text"
 var root_entities
 
+var file_name = "res://TMX_Map/TiledObjectTypes/objecttypes.json"
+var objectTypes
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
+
+	# load TMX objecttypes 
+
+	print("ObjectTypes data loaded.")
+	self.objectTypes = Utils.LoadJSON(file_name) 
 	
+	for obj in self.objectTypes:	
+		print("   | "+obj.name)
+
 	self.root_entities = Utils.FindNode("Entities")
 	
 	print("Post-process: build entities in scene at runtime ... ")

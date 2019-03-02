@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objecttypes>
- <objecttype name="Door" color="#00ff00">
+ <objecttype name="Door" color="#00aa00">
   <property name="KeyName" type="string" default="undefined"/>
   <property name="Name" type="string" default="undefined"/>
   <property name="NeedKey" type="bool" default="false"/>
   <property name="PrefabName" type="string" default="&lt;set path to tscn file&gt;"/>
   <property name="Target" type="string" default="undefined"/>
   <property name="Type" type="string" default="teleport"/>
+ </objecttype>
+ <objecttype name="Hazard" color="#aa0000">
+  <property name="Damage" type="int" default="0"/>
+  <property name="DestroyOnHit" type="bool" default="false"/>
+  <property name="Name" type="string" default="noname"/>
+  <property name="PrefabName" type="string" default="&lt;set path to prefab&gt;"/>
+  <property name="Type" type="string" default="hazard"/>
  </objecttype>
  <objecttype name="Item" color="#55ffff">
   <property name="Amount" type="int"/>

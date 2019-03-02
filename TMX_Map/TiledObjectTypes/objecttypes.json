@@ -1,0 +1,101 @@
+[
+   {
+      "name": "Door",
+      "color": "#00aa00",
+      "property": [
+         {
+            "name": "KeyName",
+            "default": "undefined"
+         },
+         {
+            "name": "Name",
+            "default": "undefined"
+         },
+         {
+            "name": "NeedKey",
+            "default": "false"
+         },
+         {
+            "name": "PrefabName",
+            "default": "<set path to tscn file>"
+         },
+         {
+            "name": "Target",
+            "default": "undefined"
+         },
+         {
+            "name": "Type",
+            "default": "teleport"
+         }
+      ]
+   },
+   {
+      "name": "Hazard",
+      "color": "#aa0000",
+      "property": [
+         {
+            "name": "Damage",
+            "default": "0"
+         },
+         {
+            "name": "DestroyOnHit",
+            "default": "false"
+         },
+         {
+            "name": "Name",
+            "default": "noname"
+         },
+         {
+            "name": "PrefabName",
+            "default": "<set path to prefab>"
+         },
+         {
+            "name": "Type",
+            "default": "hazard"
+         }
+      ]
+   },
+   {
+      "name": "Item",
+      "color": "#55ffff",
+      "property": [
+         {
+            "name": "Amount"
+         },
+         {
+            "name": "Name",
+            "default": "undefined"
+         },
+         {
+            "name": "PrefabName",
+            "default": "<set path to tscn file>"
+         },
+         {
+            "name": "Type",
+            "default": "item"
+         }
+      ]
+   },
+   {
+      "name": "Panel",
+      "color": "#aa5500",
+      "property": [
+         {
+            "name": "Name",
+            "default": "undefined"
+         },
+         {
+            "name": "PrefabName",
+            "default": "<set path to tscn file>"
+         },
+         {
+            "name": "Text",
+            "default": "<insert text to show>"
+         },
+         {
+            "name": "Type",
+            "default": "panel"
+         }
+      ]
+   }
+]
