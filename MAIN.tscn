@@ -24,7 +24,7 @@ position = Vector2( 728, 121 )
 velocity = Vector2( 0, 1 )
 
 [node name="MoveablePlatform" parent="Entities" instance=ExtResource( 4 )]
-position = Vector2( 366, 349 )
+position = Vector2( 317.252, 187.279 )
 
 [node name="Player" parent="." instance=ExtResource( 5 )]
 position = Vector2( 247.483, 99.1266 )

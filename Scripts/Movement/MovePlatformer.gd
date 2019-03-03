@@ -116,14 +116,22 @@ func Apply(delta):
 	
 	movement*=speed
 		
-	velocity.x = lerp(velocity.x, movement, accel)
+	#velocity.x = lerp(velocity.x, movement, accel)
+	velocity.x = movement
 	
 	if (isOnWall and !isOnGround):
 		velocity.y = velocity.y * wallSlideSpeed
 	
+	var floor_velocity = object.get_floor_velocity()
+#
+	if (floor_velocity.x > 1 or floor_velocity.x < -1 ):		
+		velocity = object.move_and_slide(floor_velocity,FLOOR_NORMAL,false)
+	else:
+		velocity = object.move_and_slide(velocity,FLOOR_NORMAL,true)
 	
-	velocity = object.move_and_slide(velocity,FLOOR_NORMAL,SLOPE_FRICTION)
 	
+	
+			
 	if(isOnGround):
 		_jump_count = 0
 
@@ -144,7 +152,8 @@ func Apply(delta):
 		jumping = false
 		inHurt = false
 	
-	if abs(velocity.y)>1 or abs(velocity.x) > 1: inMotion = true;
+	if abs(velocity.y)>1 or abs(velocity.x) > 1:
+		inMotion = true;
 	
 	
 # -----------------------------------------------------------
