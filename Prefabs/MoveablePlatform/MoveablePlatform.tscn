@@ -1,24 +1,20 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Prefabs/MoveablePlatform/MoveablePlatform.gd" type="Script" id=1]
 [ext_resource path="res://Prefabs/MoveablePlatform/MoveablePlatform.png" type="Texture" id=2]
-[ext_resource path="res://Scripts/Surface/SurfaceProperties.gd" type="Script" id=3]
 
 [sub_resource type="Curve2D" id=1]
 _data = {
-"points": PoolVector2Array( 0, 0, 0, 0, 62.1077, -4, 0, 0, 0, 0, -59, -4 )
+"points": PoolVector2Array( 0, 0, 0, 0, 62.4462, -4, 0, 0, 0, 0, -59, -4 )
 }
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 31.9653, 2.77689 )
 
-[sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 31.2231, 3 )
-
 [node name="MoveablePlatform" type="Path2D"]
-scale = Vector2( 1.05691, 1 )
 curve = SubResource( 1 )
 script = ExtResource( 1 )
+speed = 200
 
 [node name="PathFollow2D" type="PathFollow2D" parent="."]
 position = Vector2( 62.1077, -4 )
@@ -35,11 +31,4 @@ texture = ExtResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PathFollow2D/KinematicBody2D"]
 position = Vector2( 0.0296326, -5.63329 )
 shape = SubResource( 2 )
-
-[node name="SurfacePropertiesCallBack" type="Area2D" parent="."]
-script = ExtResource( 3 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SurfacePropertiesCallBack"]
-position = Vector2( 62.4462, -15 )
-shape = SubResource( 3 )
 

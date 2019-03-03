@@ -22,7 +22,8 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_lock_": true
 }
-jumpForce = 370
+playerMaxSpeed = 150
+jumpForce = 250
 jumpCount = 1
 
 [node name="Body" type="Node2D" parent="."]

@@ -2,7 +2,7 @@ extends Path2D
 
 onready var follow = $PathFollow2D
 
-export var speed = 2
+export var speed = 20
 var tween
 var _start = 0
 var _end = 0.9999

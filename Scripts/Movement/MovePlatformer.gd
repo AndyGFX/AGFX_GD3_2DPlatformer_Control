@@ -10,7 +10,10 @@ var speed = 0
 var accel = 0
 var movement = 0
 var velocity = Vector2()
+var gravity = Vector2()
+var floor_velocity= Vector2()
 var facing = Globals.eFacing.TO_RIGHT
+const MAX_SPEED = 600
 
 # -----------------------------------------------------------
 # Wall sliding properties
@@ -79,12 +82,12 @@ func _init(obj,mKeyLeft,mKeyRight,mKeyJump,mKeyCrunch,object_speed, object_accel
 	_shape_walk.disabled = false
 	_shape_crunch = obj.get_node("PlayerShapeCrunch")
 	_shape_crunch.disabled = true
+	
 
 # -----------------------------------------------------------
 # Apply movement to object
 # -----------------------------------------------------------
 func Apply(delta):
-
 	velocity += world_gravity * delta
 
 	movement = 0
@@ -110,42 +113,19 @@ func Apply(delta):
 			_shape_walk.disabled=false
 			_shape_crunch.disabled=true
 
- 
-	isOnGround = object.is_on_floor()
-	isOnWall = object.is_on_wall()
-	
+	if(isOnGround or self.floor_velocity.x!=0):
+		_jump_count = 0
+		
 	movement*=speed
 		
 	#velocity.x = lerp(velocity.x, movement, accel)
 	velocity.x = movement
 	
-	if (isOnWall and !isOnGround):
-		velocity.y = velocity.y * wallSlideSpeed
 	
-	var floor_velocity = object.get_floor_velocity()
-#
-	if (floor_velocity.x > 1 or floor_velocity.x < -1 ):		
-		velocity = object.move_and_slide(floor_velocity,FLOOR_NORMAL,false)
-	else:
-		velocity = object.move_and_slide(velocity,FLOOR_NORMAL,true)
-	
-	
-	
-			
-	if(isOnGround):
-		_jump_count = 0
-
-	if isOnWall:
-		# Apply jump force on key pressed when is enabled on WALL
-		if key_3.IsPressed():
-			jumping = true
-			velocity.y -= jumpForce*2.0
-	else:
-		# Apply jump force on key pressed when is enabled on GROUND
-		if key_3.IsPressed() and _jump_count<max_jump_count:
-			jumping = true
-			velocity.y -= jumpForce
-			_jump_count += 1
+	if key_3.IsPressed() and _jump_count<max_jump_count:
+		jumping = true
+		velocity.y -= jumpForce
+		_jump_count += 1
 
 	
 	if (velocity.y > 0 and isOnWall==false):
@@ -153,8 +133,19 @@ func Apply(delta):
 		inHurt = false
 	
 	if abs(velocity.y)>1 or abs(velocity.x) > 1:
-		inMotion = true;
+		inMotion = true; 
 	
+	self.floor_velocity = object.get_floor_velocity()
+#
+	if (floor_velocity.x > 0.1 or floor_velocity.x < -0.1 ):
+		velocity = object.move_and_slide(floor_velocity,FLOOR_NORMAL,false)
+	else:
+		velocity = object.move_and_slide(velocity,FLOOR_NORMAL,true)
+
+	isOnGround = object.is_on_floor()	
+	isOnWall = object.is_on_wall()
+	
+	print(isOnGround)
 	
 # -----------------------------------------------------------
 # Get last velocity vector

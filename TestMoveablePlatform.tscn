@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Prefabs/Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Sprites/Palette.png" type="Texture" id=2]
+[ext_resource path="res://Prefabs/MoveablePlatform/MoveablePlatform_2.tscn" type="PackedScene" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 303.916, 10 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 316.078, 200.894 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+editor/display_folded = true
+position = Vector2( 318, 251 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="StaticBody2D"]
+position = Vector2( -27.126, 0.131761 )
+scale = Vector2( 110.909, 2.02772 )
+texture = ExtResource( 2 )
+
+[node name="MoveablePlatform" parent="." instance=ExtResource( 3 )]
+position = Vector2( 251.837, 232.754 )
+

@@ -3,6 +3,9 @@
 importer="texture"
 type="StreamTexture"
 path="res://.import/TMX_UNI_ObjectTypesIcon.png-42234987e6347bfb9fd0c1d6d4e5d61c.stex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
