@@ -87,7 +87,71 @@ func _init(obj,mKeyLeft,mKeyRight,mKeyJump,mKeyCrunch,object_speed, object_accel
 # -----------------------------------------------------------
 # Apply movement to object
 # -----------------------------------------------------------
+#func Apply(delta):
+#	velocity += world_gravity * delta
+#
+#	movement = 0
+#	inMotion = false
+#
+#	# key check for move LEFT
+#	if key_1.IsHold():
+#		movement = -1
+#		facing = Globals.eFacing.TO_LEFT
+#
+#	# key check for move RIGHT
+#	if key_2.IsHold():
+#		movement = 1
+#		facing = Globals.eFacing.TO_RIGHT
+#
+#	# key check for toggle CRUNCH
+#	if key_4.IsPressed():
+#		inCrunch = !inCrunch;
+#		if inCrunch:
+#			_shape_walk.disabled=true
+#			_shape_crunch.disabled=false
+#		else:
+#			_shape_walk.disabled=false
+#			_shape_crunch.disabled=true
+#
+#	if(isOnGround or self.floor_velocity.x!=0):
+#		_jump_count = 0
+#
+#	movement*=speed
+#
+#	#velocity.x = lerp(velocity.x, movement, accel)
+#	velocity.x = movement
+#
+#
+#	if key_3.IsPressed() and _jump_count<max_jump_count:
+#		jumping = true
+#		velocity.y -= jumpForce
+#		_jump_count += 1
+#
+#
+#	if (velocity.y > 0 and isOnWall==false):
+#		jumping = false
+#		inHurt = false
+#
+#	if abs(velocity.y)>1 or abs(velocity.x) > 1:
+#		inMotion = true; 
+#
+#	self.floor_velocity = object.get_floor_velocity()
+##
+#	if (floor_velocity.x > 0.1 or floor_velocity.x < -0.1 ):
+#		velocity = object.move_and_slide(floor_velocity,FLOOR_NORMAL,false)
+#	else:
+#		velocity = object.move_and_slide(velocity,FLOOR_NORMAL,true)
+#
+#	isOnGround = object.is_on_floor()	
+#	isOnWall = object.is_on_wall()
+#
+#	print(isOnGround)
+
+# -----------------------------------------------------------
+# Apply movement to object
+# -----------------------------------------------------------
 func Apply(delta):
+
 	velocity += world_gravity * delta
 
 	movement = 0
@@ -113,39 +177,32 @@ func Apply(delta):
 			_shape_walk.disabled=false
 			_shape_crunch.disabled=true
 
-	if(isOnGround or self.floor_velocity.x!=0):
-		_jump_count = 0
-		
 	movement*=speed
+	
+	var floor_velocity = object.get_floor_velocity()
+	if (floor_velocity != Vector2()):
+		object.move_and_slide(floor_velocity*delta,FLOOR_NORMAL)
 		
-	#velocity.x = lerp(velocity.x, movement, accel)
-	velocity.x = movement
 	
+	velocity.x = movement 
+	velocity = object.move_and_slide(velocity,FLOOR_NORMAL,SLOPE_FRICTION)
 	
+	isOnGround = object.is_on_floor()
+
+	if(isOnGround):
+		_jump_count = 0
+
+	# Apply jump force on key pressed when is enabled
 	if key_3.IsPressed() and _jump_count<max_jump_count:
 		jumping = true
 		velocity.y -= jumpForce
 		_jump_count += 1
 
-	
-	if (velocity.y > 0 and isOnWall==false):
+	if velocity.y > 0:
 		jumping = false
 		inHurt = false
-	
-	if abs(velocity.y)>1 or abs(velocity.x) > 1:
-		inMotion = true; 
-	
-	self.floor_velocity = object.get_floor_velocity()
-#
-	if (floor_velocity.x > 0.1 or floor_velocity.x < -0.1 ):
-		velocity = object.move_and_slide(floor_velocity,FLOOR_NORMAL,false)
-	else:
-		velocity = object.move_and_slide(velocity,FLOOR_NORMAL,true)
 
-	isOnGround = object.is_on_floor()	
-	isOnWall = object.is_on_wall()
-	
-	print(isOnGround)
+	if velocity.y!=0 or velocity.x != 0: inMotion = true;
 	
 # -----------------------------------------------------------
 # Get last velocity vector
