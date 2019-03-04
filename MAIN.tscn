@@ -62,5 +62,5 @@ margin_bottom = -103.0
 
 [node name="MoveablePlatform" parent="." instance=ExtResource( 10 )]
 position = Vector2( 320.347, 183.387 )
-speed = 10
+speed = 5
 

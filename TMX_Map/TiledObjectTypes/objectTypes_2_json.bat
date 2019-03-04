@@ -1,0 +1,1 @@
+xml2json.exe objecttypes.xml objecttypes.tiled

@@ -1,30 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objecttypes>
+ <objecttype name="Coin" color="#ffff00">
+  <property name="Amount" type="int" default="1"/>
+  <property name="Name" type="string" default="Coin-1"/>
+  <property name="PrefabName" type="string" default="res://Entities/Coin/Entity_Coin_0.tscn"/>
+  <property name="Type" type="string" default="coin"/>
+ </objecttype>
+ <objecttype name="Ammo" color="#ffff00">
+  <property name="Amount" type="int" default="10"/>
+  <property name="Name" type="string" default="Ammo-10"/>
+  <property name="PrefabName" type="string" default="res://Entities/Ammo/Entity_Ammo_0.tscn"/>
+  <property name="Type" type="string" default="ammo"/>
+ </objecttype>
  <objecttype name="Door" color="#00aa00">
   <property name="KeyName" type="string" default="undefined"/>
   <property name="Name" type="string" default="undefined"/>
   <property name="NeedKey" type="bool" default="false"/>
-  <property name="PrefabName" type="string" default="&lt;set path to tscn file&gt;"/>
+  <property name="PrefabName" type="string" default="res://Entities/Teleport/Teleport.tscn"/>
   <property name="Target" type="string" default="undefined"/>
-  <property name="Type" type="string" default="teleport"/>
+  <property name="Type" type="string" default="door"/>
  </objecttype>
- <objecttype name="Hazard" color="#aa0000">
-  <property name="Damage" type="int" default="0"/>
+ <objecttype name="Hazard TOP" color="#aa0000">
+  <property name="Damage" type="int" default="10"/>
   <property name="DestroyOnHit" type="bool" default="false"/>
-  <property name="Name" type="string" default="noname"/>
-  <property name="PrefabName" type="string" default="&lt;set path to prefab&gt;"/>
-  <property name="Type" type="string" default="hazard"/>
+  <property name="Name" type="string" default="Hazard-10"/>
+  <property name="PrefabName" type="string" default="res://Entities/Hazard/Hazard_Up/Entity_hazard_Up.tscn"/>
+  <property name="Type" type="string" default="hazard-top"/>
  </objecttype>
- <objecttype name="Item" color="#55ffff">
-  <property name="Amount" type="int"/>
+ <objecttype name="Health" color="#55ffff">
+  <property name="Amount" type="int" default="100"/>
+  <property name="Name" type="string" default="Health-100"/>
+  <property name="PrefabName" type="string" default="res://Entities/Health/Entity_Health_3.tscn"/>
+  <property name="Type" type="string" default="health"/>
+ </objecttype>
+ <objecttype name="InfoPanel" color="#aa5500">
   <property name="Name" type="string" default="undefined"/>
   <property name="PrefabName" type="string" default="&lt;set path to tscn file&gt;"/>
-  <property name="Type" type="string" default="item"/>
- </objecttype>
- <objecttype name="Panel" color="#aa5500">
-  <property name="Name" type="string" default="undefined"/>
-  <property name="PrefabName" type="string" default="&lt;set path to tscn file&gt;"/>
-  <property name="Text" type="string" default="&lt;insert text to show&gt;"/>
-  <property name="Type" type="string" default="panel"/>
+  <property name="Text" type="string" default="res://Entities/InfoPanel/InfoPanel.tscn"/>
+  <property name="Type" type="string" default="info panel"/>
  </objecttype>
 </objecttypes>

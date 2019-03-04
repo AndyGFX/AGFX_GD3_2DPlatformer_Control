@@ -50,6 +50,7 @@ var _stored_gravity = Vector2(0,1000)
 var _shape_walk = null
 var _shape_crunch = null
 var _jump_count = 0
+var _speed = 0
 
 # -----------------------------------------------------------
 # Movement constants
@@ -176,8 +177,9 @@ func Apply(delta):
 		else:
 			_shape_walk.disabled=false
 			_shape_crunch.disabled=true
-
+	
 	movement*=speed
+	
 	
 	var floor_velocity = object.get_floor_velocity()
 	if (floor_velocity != Vector2()):
