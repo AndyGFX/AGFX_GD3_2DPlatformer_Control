@@ -28,12 +28,13 @@ func _ready():
 
 	print("Post-process: build entities in scene at runtime ... ")
 	var scene = Utils.FindNode(self.name)
-
+	
 	for node in scene.get_children():
 		if node is Node2D:
 			print("TMX: scan objects ...")
+			
 			for object in node.get_children():
-
+				object.hide()
 				if object.has_meta("Type"):
 					var type = object.get_meta("Type")
 					#print(type)

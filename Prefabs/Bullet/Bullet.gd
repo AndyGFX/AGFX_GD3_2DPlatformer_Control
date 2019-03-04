@@ -63,6 +63,7 @@ func _on_area_enter(other):
 func _on_body_enter(other):
 	
 	if other.is_in_group("SOLID"):
+		print("Wall hit")
 		create_explosion()
 		queue_free()
 	pass  
