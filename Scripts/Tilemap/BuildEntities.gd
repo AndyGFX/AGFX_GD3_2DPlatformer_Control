@@ -44,17 +44,24 @@ func _ready():
 							Create_health(object)
 						"Ammo": 
 							Create_ammo(object)
-						"Granade":							
+						"Granade":
 							Create_granade(object)
 						"Coin":
-							Create_coin(object)							
+							Create_coin(object)
+						"PlayerStart":
+							Create_PlayerStart(object)
 #						"panel":
 #							Create_panel(scene,object)
 #						"teleport":
 #							Create_teleport(scene,object)
 
 				pass
-				
+
+# ------------------------------------------------------------------
+# HELPERS for read properties definition and return default value if
+# is not defined on tile object  
+# ------------------------------------------------------------------
+
 func GetObjectTypeFor(object_type_name):
 	
 	for object_properties in self.objectTypes.objecttypes.objecttype:
@@ -97,23 +104,66 @@ func GetObjectProperty(obj, property_name):
 	
 	pass
 
+
+# ------------------------------------------------------------------
+# ITEM: HEALTH
+# ------------------------------------------------------------------
 func Create_health(obj):
 
-	
 	var prefabName = self.GetObjectProperty(obj,"PrefabName")
 	var entityName = self.GetObjectProperty(obj,"Name")
 	var entity = CreateEntity(obj,entityName,prefabName)
-	
+
 	entity.item_amount = self.GetObjectProperty(obj,"Amount")
-	
+
+# ------------------------------------------------------------------
+# ITEM: AMMO
+# ------------------------------------------------------------------
 func Create_ammo(obj):
 
-	pass
+	var prefabName = self.GetObjectProperty(obj,"PrefabName")
+	var entityName = self.GetObjectProperty(obj,"Name")
+	var entity = CreateEntity(obj,entityName,prefabName)
+
+	entity.item_amount = self.GetObjectProperty(obj,"Amount")
 	
+	pass
+
+# ------------------------------------------------------------------
+# ITEM: GRANADE
+# ------------------------------------------------------------------
 func Create_granade(obj):
 
-	pass
+	var prefabName = self.GetObjectProperty(obj,"PrefabName")
+	var entityName = self.GetObjectProperty(obj,"Name")
+	var entity = CreateEntity(obj,entityName,prefabName)
+
+	entity.item_amount = self.GetObjectProperty(obj,"Amount")
 	
+	pass
+
+# ------------------------------------------------------------------
+# ITEM: COIN
+# ------------------------------------------------------------------
 func Create_coin(obj):
 
+	var prefabName = self.GetObjectProperty(obj,"PrefabName")
+	var entityName = self.GetObjectProperty(obj,"Name")
+	var entity = CreateEntity(obj,entityName,prefabName)
+
+	entity.item_amount = self.GetObjectProperty(obj,"Amount")
+	
+	pass
+	
+# ------------------------------------------------------------------
+# SCENE: PLAYER START POSITION
+# ------------------------------------------------------------------
+func Create_PlayerStart(obj):
+
+	var prefabName = self.GetObjectProperty(obj,"PrefabName")
+	var entityName = self.GetObjectProperty(obj,"Name")
+	var entity = CreateEntity(obj,entityName,prefabName)
+	entity.name="StartPoint"
+	print("Create_PlayerStart()")
+	entity.Respawn(Globals.player)
 	pass

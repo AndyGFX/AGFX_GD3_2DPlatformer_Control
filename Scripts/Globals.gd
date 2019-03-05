@@ -60,3 +60,5 @@ func ShowHitPoints(val,pos):
 # GAME Levels
 # ---------------------------------------------------------------------------
 
+var player = null
+

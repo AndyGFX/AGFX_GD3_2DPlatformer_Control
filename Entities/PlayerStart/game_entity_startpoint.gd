@@ -29,6 +29,8 @@ func ExitFromStartPoint():
 #------------------------------------------------
 func Respawn(player):
 	# additional code here
-	player.set_global_position(self.get_global_position())
+	if player: 
+		player.set_position(self.get_position())
+		print("Respawn(player)")
 	pass	
 	

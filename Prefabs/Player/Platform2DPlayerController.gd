@@ -115,12 +115,16 @@ func _ready():
 	# get sound fx library for player
 	Globals.player_sfx = Utils.FindNode("SoundFXPlayer")
 
-	# respawn play at 'start_point'
+	# respawn play at 'start_point' if exist now
 	Respawn()
 
+	Globals.player = self
+	
 	# Execute transition
 	# var transition = Utils.find_node("HUD").get_node("TransitionScreen")
 	# transition.Start(Globals.TO_TRANSPARENT)
+	
+	
 	pass
 
 
@@ -128,8 +132,10 @@ func _ready():
 # Respawn player position on level start if exist entity GAME_PlayerStart in scene
 # -----------------------------------------------------------
 func Respawn():
+	
 	var spawn_point = Utils.FindNode("StartPoint")
 	if spawn_point:
+		print("PLAYER - Respaw by entity")
 		spawn_point.Respawn(self)
 
 # ---------------------------------------------------------

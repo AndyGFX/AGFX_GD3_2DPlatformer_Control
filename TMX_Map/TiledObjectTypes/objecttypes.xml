@@ -1,42 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objecttypes>
- <objecttype name="Coin" color="#ffff00">
-  <property name="Amount" type="int" default="1"/>
-  <property name="Name" type="string" default="Coin-1"/>
-  <property name="PrefabName" type="string" default="res://Entities/Coin/Entity_Coin_0.tscn"/>
-  <property name="Type" type="string" default="coin"/>
- </objecttype>
  <objecttype name="Ammo" color="#ffff00">
   <property name="Amount" type="int" default="10"/>
   <property name="Name" type="string" default="Ammo-10"/>
   <property name="PrefabName" type="string" default="res://Entities/Ammo/Entity_Ammo_0.tscn"/>
-  <property name="Type" type="string" default="ammo"/>
+  <property name="Type" type="string" default="Ammo"/>
  </objecttype>
- <objecttype name="Door" color="#00aa00">
-  <property name="KeyName" type="string" default="undefined"/>
-  <property name="Name" type="string" default="undefined"/>
-  <property name="NeedKey" type="bool" default="false"/>
-  <property name="PrefabName" type="string" default="res://Entities/Teleport/Teleport.tscn"/>
-  <property name="Target" type="string" default="undefined"/>
-  <property name="Type" type="string" default="door"/>
+ <objecttype name="Coin" color="#ffff00">
+  <property name="Amount" type="int" default="1"/>
+  <property name="Name" type="string" default="Coin-1"/>
+  <property name="PrefabName" type="string" default="res://Entities/Coin/Entity_Coin_0.tscn"/>
+  <property name="Type" type="string" default="Coin"/>
  </objecttype>
- <objecttype name="Hazard TOP" color="#aa0000">
-  <property name="Damage" type="int" default="10"/>
-  <property name="DestroyOnHit" type="bool" default="false"/>
-  <property name="Name" type="string" default="Hazard-10"/>
-  <property name="PrefabName" type="string" default="res://Entities/Hazard/Hazard_Up/Entity_hazard_Up.tscn"/>
-  <property name="Type" type="string" default="hazard-top"/>
+ <objecttype name="Granade" color="#55aaff">
+  <property name="Amount" type="int" default="1"/>
+  <property name="Name" type="string" default="Granade-1"/>
+  <property name="PrefabName" type="string" default="res://Entities/Granade/Entity_Granade_0.tscn"/>
+  <property name="Type" type="string" default="Granade"/>
  </objecttype>
  <objecttype name="Health" color="#55ffff">
   <property name="Amount" type="int" default="100"/>
   <property name="Name" type="string" default="Health-100"/>
   <property name="PrefabName" type="string" default="res://Entities/Health/Entity_Health_3.tscn"/>
-  <property name="Type" type="string" default="health"/>
+  <property name="Type" type="string" default="Health"/>
  </objecttype>
  <objecttype name="InfoPanel" color="#aa5500">
   <property name="Name" type="string" default="undefined"/>
   <property name="PrefabName" type="string" default="&lt;set path to tscn file&gt;"/>
   <property name="Text" type="string" default="res://Entities/InfoPanel/InfoPanel.tscn"/>
-  <property name="Type" type="string" default="info panel"/>
+  <property name="Type" type="string" default="InfoPanel"/>
+ </objecttype>
+ <objecttype name="NextScene" color="#55ff00">
+  <property name="Name" type="string" default="NextScene"/>
+  <property name="SceneName" type="string" default="&lt;set path to *.tscn file&gt;"/>
+  <property name="Type" type="string" default="NextScene"/>
+ </objecttype>
+ <objecttype name="PlayerStart" color="#00ff00">
+  <property name="Name" type="string" default="Level-1-start"/>
+  <property name="PrefabName" type="string" default="res://Entities/PlayerStart/Entity_StartPoint.tscn"/>
+  <property name="Type" type="string" default="PlayerStart "/>
+ </objecttype>
+ <objecttype name="SavePoint" color="#00ff00">
+  <property name="Name" type="string" default="SavePoinit-"/>
+  <property name="PrefabName" type="string"/>
+  <property name="Type" type="string" default="SavePoint "/>
  </objecttype>
 </objecttypes>

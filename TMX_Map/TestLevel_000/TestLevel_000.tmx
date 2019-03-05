@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.2" tiledversion="2019.02.10" orientation="orthogonal" renderorder="right-down" width="100" height="30" tilewidth="16" tileheight="16" infinite="0" nextlayerid="4" nextobjectid="25">
+<map version="1.2" tiledversion="2019.02.10" orientation="orthogonal" renderorder="right-down" width="100" height="30" tilewidth="16" tileheight="16" infinite="0" nextlayerid="4" nextobjectid="35">
  <tileset firstgid="1" source="Autotiles.tsx"/>
  <tileset firstgid="49" source="TMX_UNI_ObjectTypesIcon.tsx"/>
  <layer id="1" name="Background" width="100" height="30" locked="1">
@@ -40,6 +40,57 @@
   <object id="24" gid="49" x="208" y="128" width="16" height="16">
    <properties>
     <property name="Type" value="Health"/>
+   </properties>
+  </object>
+  <object id="25" gid="59" x="288" y="192" width="16" height="16">
+   <properties>
+    <property name="Type" value="Coin"/>
+   </properties>
+  </object>
+  <object id="26" gid="59" x="304" y="192" width="16" height="16">
+   <properties>
+    <property name="Type" value="Coin"/>
+   </properties>
+  </object>
+  <object id="27" gid="59" x="320" y="192" width="16" height="16">
+   <properties>
+    <property name="Type" value="Coin"/>
+   </properties>
+  </object>
+  <object id="28" gid="59" x="336" y="192" width="16" height="16">
+   <properties>
+    <property name="Type" value="Coin"/>
+   </properties>
+  </object>
+  <object id="29" type="Granade" gid="69" x="176" y="192" width="16" height="16">
+   <properties>
+    <property name="Type" value="Granade"/>
+   </properties>
+  </object>
+  <object id="30" type="Granade" gid="69" x="192" y="192" width="16" height="16">
+   <properties>
+    <property name="Type" value="Granade"/>
+   </properties>
+  </object>
+  <object id="31" type="Ammo" gid="79" x="225" y="192" width="16" height="16">
+   <properties>
+    <property name="Type" value="Ammo"/>
+   </properties>
+  </object>
+  <object id="32" type="Ammo" gid="79" x="242" y="192" width="16" height="16">
+   <properties>
+    <property name="Type" value="Ammo"/>
+   </properties>
+  </object>
+  <object id="33" gid="129" x="480" y="96" width="16" height="16">
+   <properties>
+    <property name="Name" value="StartPoint"/>
+    <property name="Type" value="PlayerStart"/>
+   </properties>
+  </object>
+  <object id="34" gid="139" x="1456" y="448" width="16" height="16">
+   <properties>
+    <property name="Type" value="NextScene"/>
    </properties>
   </object>
  </objectgroup>
