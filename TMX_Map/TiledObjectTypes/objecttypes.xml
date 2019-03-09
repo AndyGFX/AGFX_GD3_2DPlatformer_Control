@@ -25,15 +25,29 @@
   <property name="Type" type="string" default="Health"/>
  </objecttype>
  <objecttype name="InfoPanel" color="#aa5500">
-  <property name="Name" type="string" default="undefined"/>
-  <property name="PrefabName" type="string" default="&lt;set path to tscn file&gt;"/>
-  <property name="Text" type="string" default="res://Entities/InfoPanel/InfoPanel.tscn"/>
+  <property name="Name" type="string" default="InfoPanel"/>
+  <property name="Offset_x" type="float" default="0"/>
+  <property name="Offset_y" type="float" default="0"/>
+  <property name="PrefabName" type="string" default="res://Entities/InfoPanel/InfoPanel.tscn"/>
+  <property name="Text" type="string" default="&lt;define text&gt;"/>
   <property name="Type" type="string" default="InfoPanel"/>
+ </objecttype>
+ <objecttype name="Light" color="#ffffff">
+  <property name="Color" type="color" default="#ffffffff"/>
+  <property name="Energy" type="float" default="1"/>
+  <property name="Name" type="string" default="Light-xy"/>
+  <property name="PrefabName" type="string" default="&lt;set path to resource&gt;"/>
+  <property name="Type" type="string" default="Light"/>
  </objecttype>
  <objecttype name="NextScene" color="#55ff00">
   <property name="Name" type="string" default="NextScene"/>
   <property name="SceneName" type="string" default="&lt;set path to *.tscn file&gt;"/>
   <property name="Type" type="string" default="NextScene"/>
+ </objecttype>
+ <objecttype name="Pivot" color="#ffaa00">
+  <property name="Name" type="string" default="Pivot-A"/>
+  <property name="PrefabName" type="string" default="&lt;NOT USED&gt;"/>
+  <property name="Type" type="string" default="Pivot"/>
  </objecttype>
  <objecttype name="PlayerStart" color="#00ff00">
   <property name="Name" type="string" default="Level-1-start"/>
@@ -44,5 +58,11 @@
   <property name="Name" type="string" default="SavePoinit-"/>
   <property name="PrefabName" type="string"/>
   <property name="Type" type="string" default="SavePoint "/>
+ </objecttype>
+ <objecttype name="Switch" color="#ff55ff">
+  <property name="PrefabName" type="string" default="&lt;define path to resource&gt;"/>
+  <property name="TargetName" type="string" default="&lt;undefined&gt;"/>
+  <property name="Type" type="string" default="Switch"/>
+  <property name="UseOnlyOnce" type="bool" default="false"/>
  </objecttype>
 </objecttypes>

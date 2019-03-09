@@ -54,8 +54,8 @@ margin_right = 56.0
 margin_bottom = 90.0
 
 [node name="MSGPanel" parent="." instance=ExtResource( 9 )]
-margin_left = 744.0
-margin_top = -103.0
-margin_right = 744.0
-margin_bottom = -103.0
+margin_left = -1278.18
+margin_top = -247.109
+margin_right = -1278.18
+margin_bottom = -247.109
 

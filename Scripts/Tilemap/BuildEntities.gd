@@ -50,10 +50,10 @@ func _ready():
 							Create_coin(object)
 						"PlayerStart":
 							Create_PlayerStart(object)
-#						"panel":
-#							Create_panel(scene,object)
+						"InfoPanel":
+							Create_InfoPanel(object)
 #						"teleport":
-#							Create_teleport(scene,object)
+#							Create_teleport(object)
 
 				pass
 
@@ -167,3 +167,22 @@ func Create_PlayerStart(obj):
 	print("Create_PlayerStart()")
 	entity.Respawn(Globals.player)
 	pass
+	
+# ------------------------------------------------------------------
+# SCENE: INFO PANEL
+# ------------------------------------------------------------------
+func Create_InfoPanel(obj):
+
+	var prefabName = self.GetObjectProperty(obj,"PrefabName")
+	var entityName = self.GetObjectProperty(obj,"Name")
+	var entity = CreateEntity(obj,entityName,prefabName)
+	
+	
+	entity.info_text = self.GetObjectProperty(obj,"Text")
+	var ox = self.GetObjectProperty(obj,"Offset_x")
+	var oy = self.GetObjectProperty(obj,"Offset_y")
+	entity.panel_offset = Vector2(ox,oy)
+	
+	pass
+	
+		

@@ -6,4 +6,14 @@
  <tile id="80" type="PlayerStart"/>
  <tile id="90" type="NextScene"/>
  <tile id="100" type="SavePoint"/>
+ <tile id="110" type="Pivot"/>
+ <tile id="111" type="Light"/>
+ <tile id="112" type="Switch"/>
+ <tile id="130" type="InfoPanel">
+  <properties>
+   <property name="Name" value="InfoPanel"/>
+   <property name="Text" value="Sample of Info panel message"/>
+   <property name="Type" value="InfoPanel"/>
+  </properties>
+ </tile>
 </tileset>
