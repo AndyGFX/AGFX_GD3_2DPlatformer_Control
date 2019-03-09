@@ -18,4 +18,12 @@
    <property name="Type" value="InfoPanel"/>
   </properties>
  </tile>
+ <tile id="210" type="Hazard D">
+  <properties>
+   <property name="Type" value="Hazard D"/>
+  </properties>
+ </tile>
+ <tile id="211" type="Hazard L"/>
+ <tile id="212" type="Hazard U"/>
+ <tile id="213" type="Hazard R"/>
 </tileset>

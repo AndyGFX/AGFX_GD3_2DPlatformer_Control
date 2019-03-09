@@ -52,6 +52,10 @@ func _ready():
 							Create_PlayerStart(object)
 						"InfoPanel":
 							Create_InfoPanel(object)
+						"Hazard U": Create_Hazard(object)
+						"Hazard R": Create_Hazard(object)
+						"Hazard D": Create_Hazard(object)
+						"Hazard L": Create_Hazard(object)
 #						"teleport":
 #							Create_teleport(object)
 
@@ -184,5 +188,17 @@ func Create_InfoPanel(obj):
 	entity.panel_offset = Vector2(ox,oy)
 	
 	pass
+
+# ------------------------------------------------------------------
+# SCENE: INFO PANEL
+# ------------------------------------------------------------------
+func Create_Hazard(obj):
+
+	var prefabName = self.GetObjectProperty(obj,"PrefabName")
+	var entityName = self.GetObjectProperty(obj,"Name")
+	var entity = CreateEntity(obj,entityName,prefabName)
 	
-		
+	entity.damage = self.GetObjectProperty(obj,"Damage")
+	
+	
+	pass

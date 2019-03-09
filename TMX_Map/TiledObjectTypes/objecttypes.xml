@@ -18,6 +18,30 @@
   <property name="PrefabName" type="string" default="res://Entities/Granade/Entity_Granade_0.tscn"/>
   <property name="Type" type="string" default="Granade"/>
  </objecttype>
+ <objecttype name="Hazard D" color="#aa0000">
+  <property name="Damage" type="int" default="2"/>
+  <property name="Name" type="string" default="Hazard_D_2"/>
+  <property name="PrefabName" type="string" default="res://Entities/Hazard/Hazard_Down/Entity_hazard_Down.tscn"/>
+  <property name="Type" type="string" default="Hazard D "/>
+ </objecttype>
+ <objecttype name="Hazard L" color="#aa0000">
+  <property name="Damage" type="int" default="2"/>
+  <property name="Name" type="string" default="Hazard_U_2"/>
+  <property name="PrefabName" type="string" default="res://Entities/Hazard/Hazard_Left/Entity_hazard_Left.tscn"/>
+  <property name="Type" type="string" default="Hazard L "/>
+ </objecttype>
+ <objecttype name="Hazard R" color="#aa0000">
+  <property name="Damage" type="int" default="2"/>
+  <property name="Name" type="string" default="Hazard_R_2"/>
+  <property name="PrefabName" type="string" default="res://Entities/Hazard/Hazard_Right/Entity_hazard_Right.tscn"/>
+  <property name="Type" type="string" default="Hazard R "/>
+ </objecttype>
+ <objecttype name="Hazard U" color="#aa0000">
+  <property name="Damage" type="int" default="2"/>
+  <property name="Name" type="string" default="Hazard_U_2"/>
+  <property name="PrefabName" type="string" default="res://Entities/Hazard/Hazard_Up/Entity_hazard_Up.tscn"/>
+  <property name="Type" type="string" default="Hazard U "/>
+ </objecttype>
  <objecttype name="Health" color="#55ffff">
   <property name="Amount" type="int" default="100"/>
   <property name="Name" type="string" default="Health-100"/>
