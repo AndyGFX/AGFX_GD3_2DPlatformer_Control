@@ -12,6 +12,22 @@
   <property name="PrefabName" type="string" default="res://Entities/Coin/Entity_Coin_0.tscn"/>
   <property name="Type" type="string" default="Coin"/>
  </objecttype>
+ <objecttype name="Enemy H" color="#aa0000">
+  <property name="Armor" type="int" default="100"/>
+  <property name="Damage" type="int" default="10"/>
+  <property name="Name" type="string" default="Enemy-H"/>
+  <property name="PrefabName" type="string" default="res://Entities/Enemies/MoveHorizontal/Entity_Enemy_H_0.tscn"/>
+  <property name="Speed" type="int" default="25"/>
+  <property name="Type" type="string" default="Enemy H "/>
+ </objecttype>
+ <objecttype name="Enemy V" color="#aa0000">
+  <property name="Armor" type="int" default="100"/>
+  <property name="Damage" type="int" default="10"/>
+  <property name="Name" type="string" default="Enemy-V"/>
+  <property name="PrefabName" type="string" default="res://Entities/Enemies/MoveVertical/Entity_Enemy_V_0.tscn"/>
+  <property name="Speed" type="int" default="25"/>
+  <property name="Type" type="string" default="Enemy V "/>
+ </objecttype>
  <objecttype name="Granade" color="#55aaff">
   <property name="Amount" type="int" default="1"/>
   <property name="Name" type="string" default="Granade-1"/>

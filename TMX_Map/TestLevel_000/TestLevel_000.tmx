@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.2" tiledversion="2019.02.10" orientation="orthogonal" renderorder="right-down" width="100" height="30" tilewidth="16" tileheight="16" infinite="0" nextlayerid="4" nextobjectid="44">
+<map version="1.2" tiledversion="2019.02.10" orientation="orthogonal" renderorder="right-down" width="100" height="30" tilewidth="16" tileheight="16" infinite="0" nextlayerid="4" nextobjectid="46">
  <tileset firstgid="1" source="Autotiles.tsx"/>
  <tileset firstgid="49" source="TMX_UNI_ObjectTypesIcon.tsx"/>
  <layer id="1" name="Background" width="100" height="30" locked="1">
@@ -133,6 +133,16 @@
   <object id="43" gid="262" x="1088" y="112" width="16" height="16">
    <properties>
     <property name="Type" value="Hazard R"/>
+   </properties>
+  </object>
+  <object id="44" gid="249" x="528" y="192" width="16" height="16">
+   <properties>
+    <property name="Type" value="Enemy H"/>
+   </properties>
+  </object>
+  <object id="45" gid="250" x="720" y="144" width="16" height="16">
+   <properties>
+    <property name="Type" value="Enemy V"/>
    </properties>
   </object>
  </objectgroup>

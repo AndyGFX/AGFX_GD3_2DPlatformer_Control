@@ -56,6 +56,8 @@ func _ready():
 						"Hazard R": Create_Hazard(object)
 						"Hazard D": Create_Hazard(object)
 						"Hazard L": Create_Hazard(object)
+						"Enemy H": Create_Hazard(object)
+						"Enemy V": Create_Enemy(object)
 #						"teleport":
 #							Create_teleport(object)
 
@@ -190,7 +192,7 @@ func Create_InfoPanel(obj):
 	pass
 
 # ------------------------------------------------------------------
-# SCENE: INFO PANEL
+# SCENE: HAZARD
 # ------------------------------------------------------------------
 func Create_Hazard(obj):
 
@@ -199,6 +201,22 @@ func Create_Hazard(obj):
 	var entity = CreateEntity(obj,entityName,prefabName)
 	
 	entity.damage = self.GetObjectProperty(obj,"Damage")
+	
+	
+	pass
+	
+# ------------------------------------------------------------------
+# SCENE: ENEMY
+# ------------------------------------------------------------------
+func Create_Enemy(obj):
+
+	var prefabName = self.GetObjectProperty(obj,"PrefabName")
+	var entityName = self.GetObjectProperty(obj,"Name")
+	var entity = CreateEntity(obj,entityName,prefabName)
+	
+	entity.damage = self.GetObjectProperty(obj,"Damage")
+	entity.armor = self.GetObjectProperty(obj,"Armor")
+	entity.speed = self.GetObjectProperty(obj,"Speed")
 	
 	
 	pass
