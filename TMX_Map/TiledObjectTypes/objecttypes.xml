@@ -105,4 +105,11 @@
   <property name="Type" type="string" default="Switch"/>
   <property name="UseOnlyOnce" type="bool" default="false"/>
  </objecttype>
+ <objecttype name="Teleport" color="#55aa00">
+  <property name="KeyName" type="string" default="&lt;undefined&gt;"/>
+  <property name="Name" type="string" default="Teleport A"/>
+  <property name="NeedKey" type="bool" default="false"/>
+  <property name="PrefabName" type="string" default="res://Entities/Teleport/Teleport.tscn"/>
+  <property name="TargetName" type="string" default="Teleport B "/>
+ </objecttype>
 </objecttypes>

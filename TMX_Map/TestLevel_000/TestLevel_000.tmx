@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.2" tiledversion="2019.02.10" orientation="orthogonal" renderorder="right-down" width="100" height="30" tilewidth="16" tileheight="16" infinite="0" nextlayerid="4" nextobjectid="46">
+<map version="1.2" tiledversion="2019.02.10" orientation="orthogonal" renderorder="right-down" width="100" height="30" tilewidth="16" tileheight="16" infinite="0" nextlayerid="4" nextobjectid="48">
  <tileset firstgid="1" source="Autotiles.tsx"/>
  <tileset firstgid="49" source="TMX_UNI_ObjectTypesIcon.tsx"/>
  <layer id="1" name="Background" width="100" height="30" locked="1">
@@ -143,6 +143,18 @@
   <object id="45" gid="250" x="720" y="144" width="16" height="16">
    <properties>
     <property name="Type" value="Enemy V"/>
+   </properties>
+  </object>
+  <object id="46" gid="199" x="1208" y="135" width="16" height="16">
+   <properties>
+    <property name="Name" value="Teleport A"/>
+    <property name="TargetName" value="Teleport B"/>
+   </properties>
+  </object>
+  <object id="47" gid="199" x="1464" y="184" width="16" height="16">
+   <properties>
+    <property name="Name" value="Teleport B"/>
+    <property name="TargetName" value="Teleport A"/>
    </properties>
   </object>
  </objectgroup>

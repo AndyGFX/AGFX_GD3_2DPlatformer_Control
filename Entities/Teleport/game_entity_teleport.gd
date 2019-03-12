@@ -1,10 +1,10 @@
 extends Area2D
 
-export var source_name = "<undefiend>"
-export var target_name = "<undefiend>"
+export var source_name = "<undefined>"
+export var target_name = "<undefined>"
 export var on_button = "key_use"
 export var need_key_item = false
-export var key_item_name = "<undefiend>"
+export var key_item_name = "<undefined>"
 export var teleport_type = 0
 
 var eventOwner = null

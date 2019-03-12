@@ -18,6 +18,7 @@
    <property name="Type" value="InfoPanel"/>
   </properties>
  </tile>
+ <tile id="150" type="Teleport"/>
  <tile id="200" type="Enemy H"/>
  <tile id="201" type="Enemy V"/>
  <tile id="210" type="Hazard D">
