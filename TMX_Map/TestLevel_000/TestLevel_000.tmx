@@ -149,12 +149,14 @@
    <properties>
     <property name="Name" value="Teleport A"/>
     <property name="TargetName" value="Teleport B"/>
+    <property name="Type" value="Teleport"/>
    </properties>
   </object>
   <object id="47" gid="199" x="1464" y="184" width="16" height="16">
    <properties>
     <property name="Name" value="Teleport B"/>
     <property name="TargetName" value="Teleport A"/>
+    <property name="Type" value="Teleport"/>
    </properties>
   </object>
  </objectgroup>

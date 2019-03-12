@@ -111,5 +111,6 @@
   <property name="NeedKey" type="bool" default="false"/>
   <property name="PrefabName" type="string" default="res://Entities/Teleport/Teleport.tscn"/>
   <property name="TargetName" type="string" default="Teleport B "/>
+  <property name="Type" type="string" default="Teleport "/>
  </objecttype>
 </objecttypes>

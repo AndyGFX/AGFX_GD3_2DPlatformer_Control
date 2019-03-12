@@ -8,6 +8,7 @@ var root_entities
 var file_name = "res://TMX_Map/TiledObjectTypes/objecttypes.tiled"
 var objectTypes
 
+
 func Initialize_ObjectTypes():
 	
 	# load TMX objecttypes 
@@ -58,8 +59,8 @@ func _ready():
 						"Hazard L": Create_Hazard(object)
 						"Enemy H": Create_Hazard(object)
 						"Enemy V": Create_Enemy(object)
-#						"teleport":
-#							Create_teleport(object)
+						"Teleport":
+							Create_Teleport(object)
 
 				pass
 
@@ -94,11 +95,15 @@ func CreateInstance(object,name,pos):
 	_instance.set_owner(self.root_entities)
 	return _instance
 	
-func CreateEntity(obj,entity_name,prefab_name):
+func CreateEntity(obj,entity_name,prefab_name,add_number=true):
 	
 	var entity_prefab = load(prefab_name)	
 	var entity_pos = obj.get_position()
-	return CreateInstance(entity_prefab,entity_name+"("+obj.name+")",entity_pos)
+	
+	if add_number:
+		return CreateInstance(entity_prefab,entity_name+"("+obj.name+")",entity_pos)
+	else:
+		return CreateInstance(entity_prefab,entity_name,entity_pos)
 
 func GetObjectProperty(obj, property_name):
 
@@ -217,6 +222,24 @@ func Create_Enemy(obj):
 	entity.damage = self.GetObjectProperty(obj,"Damage")
 	entity.armor = self.GetObjectProperty(obj,"Armor")
 	entity.speed = self.GetObjectProperty(obj,"Speed")
+	
+	
+	pass
+	
+# ------------------------------------------------------------------
+# SCENE: TELEPORT
+# ------------------------------------------------------------------
+func Create_Teleport(obj):
+
+	var prefabName = self.GetObjectProperty(obj,"PrefabName")
+	var entityName = self.GetObjectProperty(obj,"Name")
+	var entity = CreateEntity(obj,entityName,prefabName,false)
+	
+	
+	entity.source_name = self.GetObjectProperty(obj,"SourceName")	
+	entity.target_name = self.GetObjectProperty(obj,"TargetName")
+	entity.need_key_item = self.GetObjectProperty(obj,"NeedKey")
+	entity.key_item_name = self.GetObjectProperty(obj,"KeyName")
 	
 	
 	pass
