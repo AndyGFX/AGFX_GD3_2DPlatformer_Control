@@ -61,7 +61,7 @@ func _on_area_enter(other):
 func _on_body_enter(body):
 
 	if body.is_in_group("GRANADE"):
-		body.create_explosion()
+		if body.has_method("create_explosion"): body.create_explosion()
 		set_armor(body.granadeDamage)
 
 				
