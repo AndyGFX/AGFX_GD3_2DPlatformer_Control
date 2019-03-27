@@ -25,6 +25,7 @@ func create_explosion():
 	var explosion = scn_explosion[idx].instance()
 	explosion.set_position(get_position())
 	Utils.FindNode("Container").add_child(explosion)
+	queue_free()
 	pass
 	
 
@@ -35,13 +36,5 @@ func _on_body_enter(other):
 	
 	if other.is_in_group("SOLID"):
 		create_explosion()
-		queue_free()
-	pass
 	
-	if other.is_in_group("ENEMY"):
-		create_explosion()
-		queue_free()
-		# your code here ...
-	pass	
-
 
