@@ -108,6 +108,9 @@ func _ready():
 	GameData.Set('health',50)
 	GameData.Set('ammo',100)
 	GameData.Set('granade',9)
+	GameData.Set('powerup_jump',0)
+	GameData.Set('powerup_gravity',0)
+	GameData.Set('powerup_speed',0)
 	
 	#reset saved player game data
 	GameData.Save()
