@@ -94,6 +94,27 @@
   <property name="PrefabName" type="string" default="res://Entities/PlayerStart/Entity_StartPoint.tscn"/>
   <property name="Type" type="string" default="PlayerStart "/>
  </objecttype>
+ <objecttype name="PU_Gravity" color="#a0a0a4">
+  <property name="Gravity" type="float" default="500"/>
+  <property name="Time" type="int" default="15"/>
+  <property name="Name" type="string" default="PU Gravity 0"/>
+  <property name="PrefabName" type="string" default="res://Entities/PowerUps/PowerUp_Gravity/Entity_PowerUpGravity_0.tscn"/>
+  <property name="Type" type="string" default="PU_Gravity"/>
+ </objecttype>
+ <objecttype name="PU_Jump" color="#a0a0a4">
+  <property name="Name" type="string" default="PU Jump 0"/>
+  <property name="PrefabName" type="string" default="res://Entities/PowerUps/PowerUp_Jump/Entity_PowerUpJump_0.tscn"/>
+  <property name="Time" type="int" default="15"/>
+  <property name="Force" type="150" default="150"/>  
+  <property name="Type" type="string" default="PU_Jump"/>
+ </objecttype>
+ <objecttype name="PU_Speed" color="#a0a0a4">
+  <property name="Name" type="string" default="PU Speed 0"/>
+  <property name="PrefabName" type="string" default="res://Entities/PowerUps/PowerUp_Speed/Entity_PowerUpSpeed_0.tscn"/>
+  <property name="Speed" type="float" default="150"/>
+  <property name="Time" type="int" default="15"/>
+  <property name="Type" type="string" default="PU_Speed"/>
+ </objecttype>
  <objecttype name="SavePoint" color="#00ff00">
   <property name="Name" type="string" default="SavePoinit-"/>
   <property name="PrefabName" type="string"/>

@@ -19,6 +19,9 @@
   </properties>
  </tile>
  <tile id="150" type="Teleport"/>
+ <tile id="190" type="PU_Gravity"/>
+ <tile id="191" type="PU_Speed"/>
+ <tile id="192" type="PU_Jump"/>
  <tile id="200" type="Enemy H"/>
  <tile id="201" type="Enemy V"/>
  <tile id="210" type="Hazard D">

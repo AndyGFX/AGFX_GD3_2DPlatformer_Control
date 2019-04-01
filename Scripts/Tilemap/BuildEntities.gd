@@ -59,8 +59,10 @@ func _ready():
 						"Hazard L": Create_Hazard(object)
 						"Enemy H": Create_Hazard(object)
 						"Enemy V": Create_Enemy(object)
-						"Teleport":
-							Create_Teleport(object)
+						"Teleport": Create_Teleport(object)
+						"PU_Speed": Create_PowerUp_Speed(object)
+						"PU_Gravity": Create_PowerUp_Gravity(object)
+						"PU_Jump": Create_PowerUp_Jump(object)
 
 				pass
 
@@ -106,7 +108,7 @@ func CreateEntity(obj,entity_name,prefab_name,add_number=true):
 		return CreateInstance(entity_prefab,entity_name,entity_pos)
 
 func GetObjectProperty(obj, property_name):
-
+	print(obj.get_meta_list())
 	if obj.has_meta(property_name):
 		return obj.get_meta(property_name)
 
@@ -243,3 +245,48 @@ func Create_Teleport(obj):
 	
 	
 	pass
+	
+# ------------------------------------------------------------------
+# SCENE: POWERUP - GRAVITY
+# ------------------------------------------------------------------
+func Create_PowerUp_Gravity(obj):
+
+	var prefabName = self.GetObjectProperty(obj,"PrefabName")
+	var entityName = self.GetObjectProperty(obj,"Name")
+	var entity = CreateEntity(obj,entityName,prefabName)
+	
+	entity.time_to_off = self.GetObjectProperty(obj,"Time")
+	var gy = self.GetObjectProperty(obj,"Gravity")
+	entity.new_gravity.y = gy
+	entity.new_gravity.x = 0
+	
+	pass
+	
+# ------------------------------------------------------------------
+# SCENE: POWERUP - SPEED
+# ------------------------------------------------------------------
+func Create_PowerUp_Speed(obj):
+
+	
+	var prefabName = self.GetObjectProperty(obj,"PrefabName")
+	var entityName = self.GetObjectProperty(obj,"Name")
+	var entity = CreateEntity(obj,entityName,prefabName)
+	
+	entity.time_to_off = self.GetObjectProperty(obj,"Time")
+	entity.new_speed = self.GetObjectProperty(obj,"Speed")
+	
+	pass
+	
+# ------------------------------------------------------------------
+# SCENE: POWERUP - JUMP
+# ------------------------------------------------------------------
+func Create_PowerUp_Jump(obj):
+
+	var prefabName = self.GetObjectProperty(obj,"PrefabName")
+	var entityName = self.GetObjectProperty(obj,"Name")
+	var entity = CreateEntity(obj,entityName,prefabName)
+	
+	entity.time_to_off = self.GetObjectProperty(obj,"Time")
+	entity.new_jump_force = self.GetObjectProperty(obj,"Force")
+	pass
+	
