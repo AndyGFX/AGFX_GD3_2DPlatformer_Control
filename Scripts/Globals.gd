@@ -31,7 +31,6 @@ var msg_info_panel = preload("res://Prefabs/MessagePanel/MessageInfoPanel.tscn")
 var btn_info_panel = preload("res://Prefabs/PressButtonPanel/ButtonPressPanel.tscn")
 
 # powerups
-# powerups
 var powerup_jump = preload("res://Prefabs/PowerUps/PowerUpJump.tscn")
 var powerup_speed = preload("res://Prefabs/PowerUps/PowerUpSpeed.tscn")
 var powerup_gravity = preload("res://Prefabs/PowerUps/PowerUpGravity.tscn")

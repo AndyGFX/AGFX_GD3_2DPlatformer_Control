@@ -105,7 +105,7 @@
   <property name="Name" type="string" default="PU Jump 0"/>
   <property name="PrefabName" type="string" default="res://Entities/PowerUps/PowerUp_Jump/Entity_PowerUpJump_0.tscn"/>
   <property name="Time" type="int" default="15"/>
-  <property name="Force" type="150" default="150"/>  
+  <property name="Force" type="float" default="150"/>  
   <property name="Type" type="string" default="PU_Jump"/>
  </objecttype>
  <objecttype name="PU_Speed" color="#a0a0a4">

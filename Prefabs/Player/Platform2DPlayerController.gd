@@ -210,16 +210,15 @@ func _on_TriggerDetector_area_entered( area ):
 		btn_info.Show()
 		area.Teleport(player)
 
-# 	# | Pickup timelimited jump force
-# 	# -----------------------------------------------------
-# 	if area.has_method('PickupPowerUpJump'):
+	# | Pickup timelimited jump force
+	# -----------------------------------------------------
+	if area.has_method('PickupPowerUpJump'):
+		# setup powerup
+		var jump = Globals.powerup_jump.instance()
+		jump.Start(move,container,area.time_to_off,area.new_jump_force)
 
-# 		# setup powerup
-# 		var jump = Globals.powerup_jump.instance()
-# 		jump.Start(move,container,area.time_to_off,area.new_jump_force)
-
-# 		# remove powerup
-# 		area.PickupPowerUpJump()
+		# remove powerup
+		area.PickupPowerUpJump()
 
 # 	# | Pickup timelimited speed
 # 	# -----------------------------------------------------
