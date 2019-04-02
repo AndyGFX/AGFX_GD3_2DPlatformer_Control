@@ -51,13 +51,13 @@ margin_right = 56.0
 margin_bottom = 90.0
 
 [node name="HUD_PowerUp_SPEED" parent="CanvasLayer" instance=ExtResource( 8 )]
-position = Vector2( 407, 24 )
+position = Vector2( 412, 20 )
 
 [node name="HUD_PowerUp_JUMP" parent="CanvasLayer" instance=ExtResource( 9 )]
-position = Vector2( 407, 42 )
+position = Vector2( 394, 20 )
 
 [node name="HUD_PowerUp_GRAVITY" parent="CanvasLayer" instance=ExtResource( 10 )]
-position = Vector2( 407, 60 )
+position = Vector2( 376, 21 )
 
 [node name="MSGPanel" parent="." instance=ExtResource( 11 )]
 margin_left = -1278.18
