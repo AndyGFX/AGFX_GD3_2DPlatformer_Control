@@ -1,8 +1,13 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Prefabs/HUD/HUD_PowerUp_GRAVITY.gd" type="Script" id=1]
 [ext_resource path="res://Prefabs/HUD/HUD_PowerUp_BKG.png" type="Texture" id=2]
-[ext_resource path="res://Entities/PowerUps/PowerUp_Gravity/Gravity_0.png" type="Texture" id=3]
+[ext_resource path="res://Fonts/runescape_uf.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Entities/PowerUps/PowerUp_Gravity/Gravity_0.png" type="Texture" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 8
+font_data = ExtResource( 3 )
 
 [node name="HUD_PowerUp_GRAVITY" type="Node2D"]
 script = ExtResource( 1 )
@@ -10,7 +15,15 @@ script = ExtResource( 1 )
 [node name="PowerUp BKG" type="Sprite" parent="."]
 texture = ExtResource( 2 )
 
+[node name="Label" type="Label" parent="."]
+margin_left = 5.19574
+margin_top = 9.06893
+margin_right = 45.1957
+margin_bottom = 25.0689
+custom_fonts/font = SubResource( 1 )
+text = "1"
+
 [node name="PowerUp Icon" type="Sprite" parent="."]
 modulate = Color( 1, 1, 1, 0.14902 )
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 

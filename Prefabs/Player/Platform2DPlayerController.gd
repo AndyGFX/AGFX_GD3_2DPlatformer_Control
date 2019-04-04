@@ -215,7 +215,10 @@ func _on_TriggerDetector_area_entered( area ):
 	if area.has_method('PickupPowerUpJump'):
 		# setup powerup
 		var jump = Globals.powerup_jump.instance()
-		jump.Start(move,container,area.time_to_off,area.new_jump_force)
+		#TODO:
+		# - recreate to activate by KEY 1/2/3
+		# - hilite powerup HUD icon
+		#jump.Start(move,container,area.time_to_off,area.new_jump_force)
 
 		# remove powerup
 		area.PickupPowerUpJump()

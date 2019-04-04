@@ -57,7 +57,7 @@ position = Vector2( 412, 20 )
 position = Vector2( 394, 20 )
 
 [node name="HUD_PowerUp_GRAVITY" parent="CanvasLayer" instance=ExtResource( 10 )]
-position = Vector2( 376, 21 )
+position = Vector2( 376, 20 )
 
 [node name="MSGPanel" parent="." instance=ExtResource( 11 )]
 margin_left = -1278.18

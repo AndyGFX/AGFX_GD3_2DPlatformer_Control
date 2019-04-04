@@ -1,8 +1,13 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Prefabs/HUD/HUD_PowerUp_SPEED.gd" type="Script" id=1]
 [ext_resource path="res://Prefabs/HUD/HUD_PowerUp_BKG.png" type="Texture" id=2]
 [ext_resource path="res://Entities/PowerUps/PowerUp_Speed/Speed_0.png" type="Texture" id=3]
+[ext_resource path="res://Fonts/runescape_uf.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 8
+font_data = ExtResource( 4 )
 
 [node name="HUD_PowerUp_SPEED" type="Node2D"]
 script = ExtResource( 1 )
@@ -13,4 +18,12 @@ texture = ExtResource( 2 )
 [node name="PowerUpIcon" type="Sprite" parent="."]
 modulate = Color( 1, 1, 1, 0.129412 )
 texture = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 4.87257
+margin_top = 8.94962
+margin_right = 44.8726
+margin_bottom = 22.9496
+custom_fonts/font = SubResource( 1 )
+text = "3"
 
