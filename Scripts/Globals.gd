@@ -35,6 +35,11 @@ var powerup_jump = preload("res://Prefabs/PowerUps/PowerUpJump.tscn")
 var powerup_speed = preload("res://Prefabs/PowerUps/PowerUpSpeed.tscn")
 var powerup_gravity = preload("res://Prefabs/PowerUps/PowerUpGravity.tscn")
 
+# powerup HUD icon
+var powerup_jump_icon = null
+var powerup_speed_icon = null
+var powerup_gravity_icon = null
+
 # bullet prefab for firing
 onready var bullet_prefab = preload("res://Prefabs/Bullet/Bullet.tscn")
 onready var granade_prefab = preload("res://Prefabs/Granade/Granade_0.tscn")

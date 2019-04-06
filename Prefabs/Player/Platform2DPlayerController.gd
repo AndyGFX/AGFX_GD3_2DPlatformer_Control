@@ -112,6 +112,8 @@ func _ready():
 	GameData.Set('powerup_gravity',0)
 	GameData.Set('powerup_speed',0)
 	
+	
+	
 	#reset saved player game data
 	GameData.Save()
 
@@ -223,27 +225,35 @@ func _on_TriggerDetector_area_entered( area ):
 		# remove powerup
 		area.PickupPowerUpJump()
 
-# 	# | Pickup timelimited speed
-# 	# -----------------------------------------------------
-# 	if area.has_method('PickupPowerUpSpeed'):
+	# | Pickup timelimited speed
+	# -----------------------------------------------------
+	if area.has_method('PickupPowerUpSpeed'):
 
-# 		# setup powerup
-# 		var speed = Globals.powerup_speed.instance()
-# 		speed.Start(move,container,area.time_to_off,area.new_speed)
+		# setup powerup
+		var speed = Globals.powerup_speed.instance()
+		
+		#TODO:
+		# - recreate to activate by KEY 1/2/3
+		# - hilite powerup HUD icon
+		#speed.Start(move,container,area.time_to_off,area.new_speed)
 
-# 		# remove powerup
-# 		area.PickupPowerUpSpeed()
+		# remove powerup
+		area.PickupPowerUpSpeed()
 
-# 	# | Pickup timelimited gravity
-# 	# -----------------------------------------------------
-# 	if area.has_method('PickupPowerUpGravity'):
+	# | Pickup timelimited gravity
+	# -----------------------------------------------------
+	if area.has_method('PickupPowerUpGravity'):
 
-# 		# setup powerup
-# 		var grav = Globals.powerup_gravity.instance()
-# 		grav.Start(move,container,area.time_to_off,area.new_gravity)
+		# setup powerup
+		var grav = Globals.powerup_gravity.instance()
+		
+		#TODO:
+		# - recreate to activate by KEY 1/2/3
+		# - hilite powerup HUD icon
+		#grav.Start(move,container,area.time_to_off,area.new_gravity)
 
-# 		# remove powerup
-# 		area.PickupPowerUpGravity()
+		# remove powerup
+		area.PickupPowerUpGravity()
 	
 # 	# | Pickup timelimited gravity
 # 	# -----------------------------------------------------
