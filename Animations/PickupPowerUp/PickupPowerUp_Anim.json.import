@@ -1,0 +1,16 @@
+[remap]
+
+importer="eska.aseprite_importer"
+type="PackedScene"
+path="res://.import/PickupPowerUp_Anim.json-332428566fbff202b1fcd0543acf2e38.scn"
+
+[deps]
+
+source_file="res://Animations/PickupPowerUp/PickupPowerUp_Anim.json"
+dest_files=[ "res://.import/PickupPowerUp_Anim.json-332428566fbff202b1fcd0543acf2e38.scn" ]
+
+[params]
+
+sheet_image=""
+post_script=""
+autoplay_animation=""
