@@ -52,6 +52,7 @@ const hit_point = preload("res://Prefabs/DamageHitPoints/DamageHitPoint.tscn")
 
 #pickup animation
 const pickup_anim = preload("res://Prefabs/PickupItems/PickupAnimation/PickupItemAnimation.tscn")
+const pickup_powerup_anim = preload("res://Animations/PickupPowerUp/PickupPowerupAnimation.tscn")
 
 # ---------------------------------------------------------
 # Show flying hit points on enemy

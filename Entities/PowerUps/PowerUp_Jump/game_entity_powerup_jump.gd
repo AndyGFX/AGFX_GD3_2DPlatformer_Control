@@ -16,7 +16,7 @@ func _ready():
 
 # pickup key method which is called from area detector assigned on player
 func PickupPowerUpJump():
-	Utils.Instantiate(Globals.pickup_anim,get_global_position())
+	Utils.Instantiate(Globals.pickup_powerup_anim,get_global_position())
 	Globals.player_sfx.Play("Pickup")
 	Globals.powerup_jump_icon.modulate = Color.white
 	queue_free()
