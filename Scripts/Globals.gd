@@ -35,7 +35,12 @@ var powerup_jump = preload("res://Prefabs/PowerUps/PowerUpJump.tscn")
 var powerup_speed = preload("res://Prefabs/PowerUps/PowerUpSpeed.tscn")
 var powerup_gravity = preload("res://Prefabs/PowerUps/PowerUpGravity.tscn")
 
-# powerup HUD icon
+# powerup scene instance
+var powerup_jump_instance = null
+var powerup_speed_instance = null
+var powerup_gravity_instance = null
+
+# powerup HUD icons
 var powerup_jump_icon = null
 var powerup_speed_icon = null
 var powerup_gravity_icon = null

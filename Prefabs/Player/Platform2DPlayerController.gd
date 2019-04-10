@@ -8,7 +8,7 @@ var cShooting = preload("res://Scripts/Attacks/Shooting.gd")
 var cThrowing  = preload("res://Scripts/Attacks/Throwing.gd")
 
 # exports to inspector
-export var playerMaxSpeed = 200
+export var playerMaxSpeed = 30
 export var acceleration = 0.2
 export var jumpForce = 200
 export var jumpCount = 2
@@ -163,6 +163,23 @@ func _physics_process(delta):
 	# check throwing
 	throw.Check()
 	
+	# check powerup useing
+	if Input.is_action_just_pressed("key_use_1"):
+		if Globals.powerup_gravity_instance!=null:
+			
+			Globals.powerup_gravity_instance.Initialize()
+		pass
+	if Input.is_action_just_pressed("key_use_2"):
+		if Globals.powerup_jump_instance!=null:
+			Globals.powerup_jump_instance.Initialize()
+		pass
+	if Input.is_action_just_pressed("key_use_3"):
+		print("SPEED USE ...")
+		if Globals.powerup_speed_instance!=null:
+			Globals.powerup_speed_instance.Initialize()
+		pass
+	
+	
 	# update viewport position
 	#if move.inMotion: emit_signal("moveSignal")
 
@@ -216,11 +233,12 @@ func _on_TriggerDetector_area_entered( area ):
 	# -----------------------------------------------------
 	if area.has_method('PickupPowerUpJump'):
 		# setup powerup
-		var jump = Globals.powerup_jump.instance()
+		Globals.powerup_jump_instance = Globals.powerup_jump.instance()
 		#TODO:
 		# - recreate to activate by KEY 1/2/3
 		# - hilite powerup HUD icon
 		#jump.Start(move,container,area.time_to_off,area.new_jump_force)
+		Globals.powerup_jump_instance.Picked(move,container,area.time_to_off,area.new_jump_force)
 
 		# remove powerup
 		area.PickupPowerUpJump()
@@ -230,12 +248,13 @@ func _on_TriggerDetector_area_entered( area ):
 	if area.has_method('PickupPowerUpSpeed'):
 
 		# setup powerup
-		var speed = Globals.powerup_speed.instance()
+		Globals.powerup_speed_instance = Globals.powerup_speed.instance()
 		
 		#TODO:
 		# - recreate to activate by KEY 1/2/3
 		# - hilite powerup HUD icon
 		#speed.Start(move,container,area.time_to_off,area.new_speed)
+		Globals.powerup_speed_instance.Picked(move,container,area.time_to_off,area.new_speed)
 
 		# remove powerup
 		area.PickupPowerUpSpeed()
@@ -245,13 +264,13 @@ func _on_TriggerDetector_area_entered( area ):
 	if area.has_method('PickupPowerUpGravity'):
 
 		# setup powerup
-		var grav = Globals.powerup_gravity.instance()
-		
+		Globals.powerup_gravity_instance = Globals.powerup_gravity.instance()
+		print("")
 		#TODO:
 		# - recreate to activate by KEY 1/2/3
 		# - hilite powerup HUD icon
-		#grav.Start(move,container,area.time_to_off,area.new_gravity)
-
+		Globals.powerup_gravity_instance.Picked(move,container,area.time_to_off,area.new_gravity)
+		print("")
 		# remove powerup
 		area.PickupPowerUpGravity()
 	
