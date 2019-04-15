@@ -22,6 +22,7 @@ editor/display_folded = true
 texture = ExtResource( 2 )
 
 [node name="OPENED" type="Node2D" parent="."]
+visible = false
 
 [node name="Chest_OPENED" type="Sprite" parent="OPENED"]
 texture = ExtResource( 3 )
@@ -44,3 +45,4 @@ position = Vector2( 8, -30 )
 [node name="Position2D4" type="Position2D" parent="OPENED/ItemsORIGIN"]
 position = Vector2( 24, -30 )
 
+[connection signal="body_entered" from="." to="." method="_on_Chest_body_entered"]
