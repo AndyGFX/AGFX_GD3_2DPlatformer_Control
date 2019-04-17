@@ -18,3 +18,6 @@ func PickupGranade():
 	Utils.Instantiate(Globals.pickup_anim,get_global_position())
 	Globals.player_sfx.Play("Pickup")
 	queue_free()
+	
+func PickupControl(state):
+	$CollisionShape2D.disabled = !state

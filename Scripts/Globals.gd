@@ -59,6 +59,15 @@ const hit_point = preload("res://Prefabs/DamageHitPoints/DamageHitPoint.tscn")
 const pickup_anim = preload("res://Prefabs/PickupItems/PickupAnimation/PickupItemAnimation.tscn")
 const pickup_powerup_anim = preload("res://Animations/PickupPowerUp/PickupPowerupAnimation.tscn")
 
+# items list for random instantiate in chest
+
+var chestItems = [
+"res://Entities/Ammo/Entity_Ammo_0.tscn",
+"res://Entities/Coin/Entity_Coin_0.tscn",
+"res://Entities/Granade/Entity_Granade_0.tscn",
+"res://Entities/Health/Entity_Health_3.tscn"
+]
+
 # ---------------------------------------------------------
 # Show flying hit points on enemy
 # ---------------------------------------------------------
