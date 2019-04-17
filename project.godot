@@ -22,6 +22,7 @@ config/icon="res://icon.png"
 [autoload]
 
 Globals="*res://Scripts/Globals.gd"
+json_beautifier="*res://Scripts/Utils/json_beautifier.gd"
 Utils="*res://Scripts/Utils/Utils.gd"
 GameData="*res://Scripts/Utils/GameData.gd"
 

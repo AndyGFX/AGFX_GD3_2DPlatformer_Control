@@ -68,5 +68,6 @@ margin_bottom = -247.109
 
 [node name="Chest" parent="." instance=ExtResource( 12 )]
 position = Vector2( 439, 240 )
+key_name = "key_A"
 
 [connection signal="body_exited" from="Chest" to="Chest" method="_on_Chest_body_exited"]

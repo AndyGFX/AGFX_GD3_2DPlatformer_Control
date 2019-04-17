@@ -11,7 +11,7 @@ func _get_item_rect():
 func _ready():
 	pass
 
-# pickup item method which is called from area detector assigned on player
+# pickup item method is called from area detector assigned on player
 func PickupCoin():
 	if !GameData: return	
 	GameData.Add(item_type,item_amount)

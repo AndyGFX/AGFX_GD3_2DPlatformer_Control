@@ -111,6 +111,10 @@ func _ready():
 	GameData.Set('powerup_jump',0)
 	GameData.Set('powerup_gravity',0)
 	GameData.Set('powerup_speed',0)
+	GameData.Set('key_A',0)
+	GameData.Set('key_B',0)
+	GameData.Set('key_C',0)
+	GameData.Set('key_D',0)
 	
 	
 	
