@@ -111,11 +111,14 @@ func _ready():
 	GameData.Set('powerup_jump',0)
 	GameData.Set('powerup_gravity',0)
 	GameData.Set('powerup_speed',0)
-	GameData.Set('key_A',0)
-	GameData.Set('key_B',0)
-	GameData.Set('key_C',0)
-	GameData.Set('key_D',0)
-	
+	GameData.Set('chest_key_a',0)
+	GameData.Set('chest_key_b',0)
+	GameData.Set('chest_key_c',0)
+	GameData.Set('chest_key_d',0)
+	GameData.Set('door_key_a',0)
+	GameData.Set('door_key_b',0)
+	GameData.Set('door_key_c',0)
+	GameData.Set('door_key_d',0)
 	
 	
 	#reset saved player game data

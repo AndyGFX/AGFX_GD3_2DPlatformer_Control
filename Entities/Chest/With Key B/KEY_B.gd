@@ -1,7 +1,7 @@
 extends Area2D
 
 
-var item_type = "chest_key_a"
+var item_type = "chest_key_b"
 var item_amount = 1
 
 	

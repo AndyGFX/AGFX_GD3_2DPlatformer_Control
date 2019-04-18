@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/DoorKey3.png-8da4e5e407529e743cc989b4f405bb6a.stex"
+path="res://.import/ChestKeyC.png-4d797fce6b633b2eb41c81bccd33cbff.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/Chest/With Key C/DoorKey3.png"
-dest_files=[ "res://.import/DoorKey3.png-8da4e5e407529e743cc989b4f405bb6a.stex" ]
+source_file="res://Entities/Chest/With Key C/ChestKeyC.png"
+dest_files=[ "res://.import/ChestKeyC.png-4d797fce6b633b2eb41c81bccd33cbff.stex" ]
 
 [params]
 
