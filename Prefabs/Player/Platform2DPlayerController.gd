@@ -212,9 +212,9 @@ func _on_TriggerDetector_area_entered( area ):
 	# -----------------------------------------------------
 	if area.has_method('PickupGranade'): area.PickupGranade()
 	
-# 	# | pickup KEY
-# 	# -----------------------------------------------------
-# 	if area.has_method('PickupKey'): area.PickupKey()
+	# | pickup KEY
+	# -----------------------------------------------------
+	if area.has_method('PickupKey'): area.PickupKey()
 
 	# | pickup HEALTH
 	# -----------------------------------------------------
