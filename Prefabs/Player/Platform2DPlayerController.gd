@@ -200,17 +200,25 @@ func _exit_tree():
 # ---------------------------------------------------------
 func _on_TriggerDetector_area_entered( area ):
 
+	# | pickup ITEM
+	# -----------------------------------------------------
+	if area is ItemEntity: area.Pickup()
+	
+	
+	
+	
+	
 	# | pickup COIN
 	# -----------------------------------------------------
-	if area.has_method('PickupCoin'): area.PickupCoin()
-
+	#if area.has_method('PickupCoin'): area.PickupCoin()
+	
 	# | pickup AMMO
 	# -----------------------------------------------------
-	if area.has_method('PickupAmmo'): area.PickupAmmo()
+	#if area.has_method('PickupAmmo'): area.PickupAmmo()
 
 	# | pickup GRANADE
 	# -----------------------------------------------------
-	if area.has_method('PickupGranade'): area.PickupGranade()
+	#if area.has_method('PickupGranade'): area.PickupGranade()
 	
 	# | pickup KEY
 	# -----------------------------------------------------
@@ -218,7 +226,7 @@ func _on_TriggerDetector_area_entered( area ):
 
 	# | pickup HEALTH
 	# -----------------------------------------------------
-	if area.has_method('PickupHealth'): area.PickupHealth()
+	#if area.has_method('PickupHealth'): area.PickupHealth()
 		
 
 

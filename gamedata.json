@@ -1,6 +1,6 @@
 {
 	"ammo": 100,
-	"chest_key_a": 1,
+	"chest_key_a": 0,
 	"chest_key_b": 0,
 	"chest_key_c": 0,
 	"chest_key_d": 0,
@@ -10,7 +10,7 @@
 	"door_key_c": 0,
 	"door_key_d": 0,
 	"granade": 9,
-	"health": 30,
+	"health": 50,
 	"powerup_gravity": 0,
 	"powerup_jump": 0,
 	"powerup_speed": 0
