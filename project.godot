@@ -15,7 +15,7 @@ _global_script_classes=[ {
 "path": "res://Scripts/Classes/ItemEntity.gd"
 } ]
 _global_script_class_icons={
-"ItemEntity": ""
+"ItemEntity": "res://Scripts/Classes/ItemEntityIcon.png"
 }
 
 [application]

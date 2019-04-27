@@ -1,5 +1,5 @@
 extends Area2D
-class_name ItemEntity
+class_name ItemEntity,"res://Scripts/Classes/ItemEntityIcon.png"
 
 var item_type = "undefined"
 export var item_amount = 1
