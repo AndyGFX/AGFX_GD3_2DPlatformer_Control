@@ -6,6 +6,12 @@
   <property name="PrefabName" type="string" default="res://Entities/Ammo/Entity_Ammo_0.tscn"/>
   <property name="Type" type="string" default="Ammo"/>
  </objecttype>
+ <objecttype name="Chest key A" color="#ffaa00">
+  <property name="Amount" type="int" default="1"/>
+  <property name="Name" type="string" default="Key-A"/>
+  <property name="PrefabName" type="string" default="res://Entities/Chest/With Key A/KEY_A.tscn"/>
+  <property name="Type" type="string" default="Chest key A"/>
+ </objecttype>
  <objecttype name="Coin" color="#ffff00">
   <property name="Amount" type="int" default="1"/>
   <property name="Name" type="string" default="Coin-1"/>
@@ -96,16 +102,16 @@
  </objecttype>
  <objecttype name="PU_Gravity" color="#a0a0a4">
   <property name="Gravity" type="float" default="500"/>
-  <property name="Time" type="int" default="15"/>
   <property name="Name" type="string" default="PU Gravity 0"/>
   <property name="PrefabName" type="string" default="res://Entities/PowerUps/PowerUp_Gravity/Entity_PowerUpGravity_0.tscn"/>
+  <property name="Time" type="int" default="15"/>
   <property name="Type" type="string" default="PU_Gravity"/>
  </objecttype>
  <objecttype name="PU_Jump" color="#a0a0a4">
+  <property name="Force" type="float" default="150"/>
   <property name="Name" type="string" default="PU Jump 0"/>
   <property name="PrefabName" type="string" default="res://Entities/PowerUps/PowerUp_Jump/Entity_PowerUpJump_0.tscn"/>
   <property name="Time" type="int" default="15"/>
-  <property name="Force" type="float" default="150"/>  
   <property name="Type" type="string" default="PU_Jump"/>
  </objecttype>
  <objecttype name="PU_Speed" color="#a0a0a4">

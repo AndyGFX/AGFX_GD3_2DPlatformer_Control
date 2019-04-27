@@ -63,6 +63,7 @@ func _ready():
 						"PU_Speed": Create_PowerUp_Speed(object)
 						"PU_Gravity": Create_PowerUp_Gravity(object)
 						"PU_Jump": Create_PowerUp_Jump(object)
+						"Chest key A": Create_ChestKey(object)
 
 				pass
 
@@ -289,4 +290,16 @@ func Create_PowerUp_Jump(obj):
 	entity.time_to_off = self.GetObjectProperty(obj,"Time")
 	entity.new_jump_force = self.GetObjectProperty(obj,"Force")
 	pass
+
+# ------------------------------------------------------------------
+# SCENE: ITEM - CHEST KEYs
+# ------------------------------------------------------------------
+func Create_ChestKey(obj):
 	
+	var prefabName = self.GetObjectProperty(obj,"PrefabName")
+	var entityName = self.GetObjectProperty(obj,"Name")
+	var entity = CreateEntity(obj,entityName,prefabName)
+	
+	entity.item_amount = self.GetObjectProperty(obj,"Amount")
+	
+	pass
