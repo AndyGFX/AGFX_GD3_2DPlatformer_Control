@@ -10,6 +10,9 @@
    <property name="Type" value="Chest key A"/>
   </properties>
  </tile>
+ <tile id="41" type="Chest key B"/>
+ <tile id="42" type="Chest key C"/>
+ <tile id="43" type="Chest key D"/>
  <tile id="80" type="PlayerStart"/>
  <tile id="90" type="NextScene"/>
  <tile id="100" type="SavePoint"/>

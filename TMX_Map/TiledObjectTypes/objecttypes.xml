@@ -12,6 +12,24 @@
   <property name="PrefabName" type="string" default="res://Entities/Chest/With Key A/KEY_A.tscn"/>
   <property name="Type" type="string" default="Chest key A"/>
  </objecttype>
+ <objecttype name="Chest key B" color="#ffaa00">
+  <property name="Amount" type="int" default="1"/>
+  <property name="Name" type="string" default="Key-B"/>
+  <property name="PrefabName" type="string" default="res://Entities/Chest/With Key B/KEY_B.tscn"/>
+  <property name="Type" type="string" default="Chest key B"/>
+ </objecttype>
+ <objecttype name="Chest key C" color="#ffaa00">
+  <property name="Amount" type="int" default="1"/>
+  <property name="Name" type="string" default="Key-C"/>
+  <property name="PrefabName" type="string" default="res://Entities/Chest/With Key C/KEY_C.tscn"/>
+  <property name="Type" type="string" default="Chest key C"/>
+ </objecttype>
+ <objecttype name="Chest key D" color="#ffaa00">
+  <property name="Amount" type="int" default="1"/>
+  <property name="Name" type="string" default="Key-D"/>
+  <property name="PrefabName" type="string" default="res://Entities/Chest/With Key D/KEY_D.tscn"/>
+  <property name="Type" type="string" default="Chest key D"/>
+ </objecttype>
  <objecttype name="Coin" color="#ffff00">
   <property name="Amount" type="int" default="1"/>
   <property name="Name" type="string" default="Coin-1"/>

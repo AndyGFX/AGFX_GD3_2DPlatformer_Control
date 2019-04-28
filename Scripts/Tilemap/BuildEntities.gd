@@ -64,6 +64,9 @@ func _ready():
 						"PU_Gravity": Create_PowerUp_Gravity(object)
 						"PU_Jump": Create_PowerUp_Jump(object)
 						"Chest key A": Create_ChestKey(object)
+						"Chest key B": Create_ChestKey(object)
+						"Chest key C": Create_ChestKey(object)
+						"Chest key D": Create_ChestKey(object)
 
 				pass
 
