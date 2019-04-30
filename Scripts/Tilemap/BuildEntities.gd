@@ -67,6 +67,7 @@ func _ready():
 						"Chest key B": Create_ChestKey(object)
 						"Chest key C": Create_ChestKey(object)
 						"Chest key D": Create_ChestKey(object)
+						"Chest": Create_Chest(object)
 
 				pass
 
@@ -304,5 +305,19 @@ func Create_ChestKey(obj):
 	var entity = CreateEntity(obj,entityName,prefabName)
 	
 	entity.item_amount = self.GetObjectProperty(obj,"Amount")
+	
+	pass
+
+# ------------------------------------------------------------------
+# SCENE: CHEST - NO KEY
+# ------------------------------------------------------------------
+func Create_Chest(obj):
+	
+	var prefabName = self.GetObjectProperty(obj,"PrefabName")
+	var entityName = self.GetObjectProperty(obj,"Name")
+	var entity = CreateEntity(obj,entityName,prefabName)
+	
+	entity.need_key = self.GetObjectProperty(obj,"NeedKey")
+	entity.key_name = self.GetObjectProperty(obj,"KeyName")
 	
 	pass

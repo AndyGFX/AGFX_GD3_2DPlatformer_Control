@@ -63,15 +63,6 @@ func _on_Chest_body_entered(body):
 	pass 
 
 # ---------------------------------------------------------
-# Disable chest events when player enter area
-# ---------------------------------------------------------
-func _on_Chest_body_exited(body):
-	if (body.is_in_group("PLAYER")):
-		print("Player EXIT")
-		self.enable_read_input_key = false
-	pass 
-
-# ---------------------------------------------------------
 # Enable collisionshape on items in chest
 # ---------------------------------------------------------
 func EnablePickup():
@@ -113,8 +104,9 @@ func Chest_Open():
 # close chest
 # ---------------------------------------------------------
 func Chest_Close():
+	self.DisablePickup()
 	self.state_close.visible = true
 	self.state_open.visible = false
 	self.is_opened = false
-	self.DisablePickup()
+	
 	pass	

@@ -18,4 +18,5 @@ func Pickup()-> void:
 # remove collision shape when is item used as item inside chest
 # for disable when is chest closed and enabled, when is onened
 func PickupControl(state)-> void:
-	$CollisionShape2D.disabled = !state
+	
+	$CollisionShape2D.set_deferred("disabled",!state)

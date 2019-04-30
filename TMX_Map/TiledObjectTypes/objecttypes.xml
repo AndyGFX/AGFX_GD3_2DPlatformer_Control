@@ -6,6 +6,13 @@
   <property name="PrefabName" type="string" default="res://Entities/Ammo/Entity_Ammo_0.tscn"/>
   <property name="Type" type="string" default="Ammo"/>
  </objecttype>
+ <objecttype name="Chest" color="#ff5500">
+  <property name="KeyName" type="string" default="undefined"/>
+  <property name="Name" type="string" default="Chest"/>
+  <property name="NeedKey" type="bool" default="false"/>
+  <property name="PrefabName" type="string" default="res://Entities/Chest/Standard/Chest.tscn"/>
+  <property name="Type" type="string" default="Chest"/>
+ </objecttype>
  <objecttype name="Chest key A" color="#ffaa00">
   <property name="Amount" type="int" default="1"/>
   <property name="Name" type="string" default="Key-A"/>

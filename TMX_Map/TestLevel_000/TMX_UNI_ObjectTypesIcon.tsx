@@ -13,6 +13,11 @@
  <tile id="41" type="Chest key B"/>
  <tile id="42" type="Chest key C"/>
  <tile id="43" type="Chest key D"/>
+ <tile id="70" type="Chest">
+  <properties>
+   <property name="Type" value="Chest"/>
+  </properties>
+ </tile>
  <tile id="80" type="PlayerStart"/>
  <tile id="90" type="NextScene"/>
  <tile id="100" type="SavePoint"/>
