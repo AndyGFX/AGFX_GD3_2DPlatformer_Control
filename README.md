@@ -29,13 +29,25 @@
 - pickup ammo
 - pickup health
 - pickup grenade
+- pickup chest keys [A,B,C,D]
 - basic entities:
   - hazard (left, right, up, down) with hurt direction for player
+  - enemies
+    - walking horizontaly
+    - walking verticaly
+    - flying (not implemented yet)
+  - powerups/modifiers with defined duration
+    - player movement speed
+    - player jump height
+    - world gravity
   - InfoPanel (show message box with user defined text)
-  - Door and move player to targe podition (next door with spawnPosition)
+  - Door with move player to target position (next door with spawn position)
+  - Chest opened by F button without key or with chest key owned
 - simple inventory system
+- build level from TMX level created and defined in Tiled only
 
 # TODO
 
 - create basic entities:
-  - enemies
+  - door opened only with key
+  - minimap (?)
