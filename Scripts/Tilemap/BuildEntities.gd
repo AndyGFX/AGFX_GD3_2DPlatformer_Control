@@ -68,6 +68,10 @@ func _ready():
 						"Chest key C": Create_ChestKey(object)
 						"Chest key D": Create_ChestKey(object)
 						"Chest": Create_Chest(object)
+						"ChestWithKeyA": Create_Chest(object)
+						"ChestWithKeyB": Create_Chest(object)
+						"ChestWithKeyC": Create_Chest(object)
+						"ChestWithKeyD": Create_Chest(object)
 
 				pass
 

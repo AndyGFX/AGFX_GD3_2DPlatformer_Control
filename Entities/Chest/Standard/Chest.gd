@@ -1,8 +1,8 @@
 extends Area2D
 
 var is_opened:bool = false
-var state_open = null
-var state_close = null
+onready var state_open = self.get_node("OPENED")
+onready var state_close = self.get_node("CLOSED")
 var enable_read_input_key:bool = false
 var items:Array = [];
 
@@ -15,8 +15,9 @@ export (String) var key_name = "undefined"
 #  Prepare chest on start
 # ---------------------------------------------------------
 func _ready():
-	self.state_open = $OPENED
-	self.state_close = $CLOSED
+	
+	#self.state_open = $OPENED
+	#self.state_close = $CLOSED
 		
 	self.items.append($OPENED/ItemsORIGIN/Position2D1)
 	self.items.append($OPENED/ItemsORIGIN/Position2D2)
@@ -35,6 +36,10 @@ func _ready():
 	
 	self.set_process(true)
 	self.Chest_Close()
+	
+	self.connect("body_entered", self, "_on_Chest_body_entered")
+	self.connect("body_exited", self, "_on_Chest_body_exited")
+	
 	pass
 
 # ---------------------------------------------------------
@@ -43,7 +48,7 @@ func _ready():
 func _process(delta):
 	if self.enable_read_input_key:
 		if Input.is_action_just_pressed("key_use"):
-			print("USE ...")
+			print("USE ...",self.get_name())
 			if (self.is_opened):
 				self.Chest_Close()
 			elif (!self.is_opened):
@@ -62,6 +67,11 @@ func _on_Chest_body_entered(body):
 		self.enable_read_input_key = true
 	pass 
 
+func _on_Chest_body_exited(body):
+	if (body.is_in_group("PLAYER")):
+		print("Player EXIT")
+		self.enable_read_input_key = false
+	pass 
 # ---------------------------------------------------------
 # Enable collisionshape on items in chest
 # ---------------------------------------------------------

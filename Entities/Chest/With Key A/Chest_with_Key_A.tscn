@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Entities/Chest/Standard/Chest.gd" type="Script" id=1]
-[ext_resource path="res://Entities/Chest/Sprites/Chest_CLOSED.png" type="Texture" id=2]
-[ext_resource path="res://Entities/Chest/Sprites/Chest_OPENED.png" type="Texture" id=3]
+[ext_resource path="res://Entities/Chest/Sprites/Chest_CLOSED_A.png" type="Texture" id=2]
+[ext_resource path="res://Entities/Chest/Sprites/Chest_OPENED_A.png" type="Texture" id=3]
 [ext_resource path="res://Entities/Chest/Sprites/Chest_inside.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -10,9 +10,10 @@ extents = Vector2( 14, 7 )
 
 [node name="Chest" type="Area2D"]
 script = ExtResource( 1 )
+need_key = true
+key_name = "chest_key_a"
 
 [node name="CLOSED" type="Node2D" parent="."]
-editor/display_folded = true
 position = Vector2( 0, 7 )
 
 [node name="Chest_CLOSED" type="Sprite" parent="CLOSED"]

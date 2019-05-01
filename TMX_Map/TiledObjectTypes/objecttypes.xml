@@ -13,6 +13,34 @@
   <property name="PrefabName" type="string" default="res://Entities/Chest/Standard/Chest.tscn"/>
   <property name="Type" type="string" default="Chest"/>
  </objecttype>
+ <objecttype name="ChestWithKeyA" color="#ff5500">
+  <property name="KeyName" type="string" default="chest_key_a"/>
+  <property name="Name" type="string" default="ChestWithKeyA"/>
+  <property name="NeedKey" type="bool" default="true"/>
+  <property name="PrefabName" type="string" default="res://Entities/Chest/With Key A/Chest_with_Key_A.tscn"/>
+  <property name="Type" type="string" default="ChestWithKeyA"/>
+ </objecttype>
+ <objecttype name="ChestWithKeyB" color="#ff5500">
+  <property name="KeyName" type="string" default="chest_key_b"/>
+  <property name="Name" type="string" default="ChestWithKeyB"/>
+  <property name="NeedKey" type="bool" default="true"/>
+  <property name="PrefabName" type="string" default="res://Entities/Chest/With Key B/Chest_with_Key_B.tscn"/>
+  <property name="Type" type="string" default="ChestWithKeyB"/>
+ </objecttype>
+ <objecttype name="ChestWithKeyC" color="#ff5500">
+  <property name="KeyName" type="string" default="chest_key_c"/>
+  <property name="Name" type="string" default="ChestWithKeyC"/>
+  <property name="NeedKey" type="bool" default="true"/>
+  <property name="PrefabName" type="string" default="res://Entities/Chest/With Key C/Chest_with_Key_C.tscn"/>
+  <property name="Type" type="string" default="ChestWithKeyC"/>
+ </objecttype>
+<objecttype name="ChestWithKeyD" color="#ff5500">
+ <property name="KeyName" type="string" default="chest_key_d"/>
+ <property name="Name" type="string" default="ChestWithKeyD"/>
+ <property name="NeedKey" type="bool" default="true"/>
+ <property name="PrefabName" type="string" default="res://Entities/Chest/With Key D/Chest_with_Key_D.tscn"/>
+ <property name="Type" type="string" default="ChestWithKeyD"/>
+</objecttype>
  <objecttype name="Chest key A" color="#ffaa00">
   <property name="Amount" type="int" default="1"/>
   <property name="Name" type="string" default="Key-A"/>

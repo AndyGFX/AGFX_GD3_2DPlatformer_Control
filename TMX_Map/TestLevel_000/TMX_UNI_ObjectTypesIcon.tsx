@@ -13,6 +13,10 @@
  <tile id="41" type="Chest key B"/>
  <tile id="42" type="Chest key C"/>
  <tile id="43" type="Chest key D"/>
+ <tile id="60" type="ChestWithKeyA"/>
+ <tile id="61" type="ChestWithKeyB"/>
+ <tile id="62" type="ChestWithKeyC"/>
+ <tile id="63" type="ChestWithKeyD"/>
  <tile id="70" type="Chest">
   <properties>
    <property name="Type" value="Chest"/>
