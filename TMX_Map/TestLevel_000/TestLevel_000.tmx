@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.2" tiledversion="2019.04.25" orientation="orthogonal" renderorder="right-down" width="100" height="30" tilewidth="16" tileheight="16" infinite="0" nextlayerid="4" nextobjectid="69">
+<map version="1.2" tiledversion="2019.04.25" orientation="orthogonal" renderorder="right-down" width="100" height="30" tilewidth="16" tileheight="16" infinite="0" nextlayerid="4" nextobjectid="73">
  <tileset firstgid="1" source="Autotiles.tsx"/>
  <tileset firstgid="49" source="TMX_UNI_ObjectTypesIcon.tsx"/>
  <layer id="1" name="Background" width="100" height="30" locked="1">
@@ -221,6 +221,26 @@
    <properties>
     <property name="NeedKey" type="bool" value="true"/>
     <property name="Type" value="ChestWithKeyD"/>
+   </properties>
+  </object>
+  <object id="69" gid="99" x="224" y="256" width="16" height="16">
+   <properties>
+    <property name="Type" value="Door key A"/>
+   </properties>
+  </object>
+  <object id="70" gid="100" x="256" y="256" width="16" height="16">
+   <properties>
+    <property name="Type" value="Door key B"/>
+   </properties>
+  </object>
+  <object id="71" gid="101" x="288" y="256" width="16" height="16">
+   <properties>
+    <property name="Type" value="Door key C"/>
+   </properties>
+  </object>
+  <object id="72" gid="102" x="320" y="256" width="16" height="16">
+   <properties>
+    <property name="Type" value="Door key D"/>
    </properties>
   </object>
  </objectgroup>
