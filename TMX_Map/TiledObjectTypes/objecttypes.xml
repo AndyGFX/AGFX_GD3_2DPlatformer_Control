@@ -6,6 +6,30 @@
   <property name="PrefabName" type="string" default="res://Entities/Ammo/Entity_Ammo_0.tscn"/>
   <property name="Type" type="string" default="Ammo"/>
  </objecttype>
+ <objecttype name="Door key A" color="#ffaa00">
+  <property name="Amount" type="int" default="1"/>
+  <property name="Name" type="string" default="Door-Key-A"/>
+  <property name="PrefabName" type="string" default="res://Entities/DoorKeys/DoorKey_A/Door_KEY_A.tscn"/>
+  <property name="Type" type="string" default="Door key A"/>
+ </objecttype>
+ <objecttype name="Door key B" color="#ffaa00">
+  <property name="Amount" type="int" default="1"/>
+  <property name="Name" type="string" default="Door-Key-B"/>
+  <property name="PrefabName" type="string" default="res://Entities/DoorKeys/DoorKey_B/Door_KEY_B.tscn"/>
+  <property name="Type" type="string" default="Door key B"/>
+ </objecttype>
+ <objecttype name="Door key C" color="#ffaa00">
+  <property name="Amount" type="int" default="1"/>
+  <property name="Name" type="string" default="Door-Key-C"/>
+  <property name="PrefabName" type="string" default="res://Entities/DoorKeys/DoorKey_C/Door_KEY_C.tscn"/>
+  <property name="Type" type="string" default="Door key C"/>
+ </objecttype>
+ <objecttype name="Door key D" color="#ffaa00">
+  <property name="Amount" type="int" default="1"/>
+  <property name="Name" type="string" default="Door-Key-D"/>
+  <property name="PrefabName" type="string" default="res://Entities/DoorKeys/DoorKey_D/Door_KEY_D.tscn"/>
+  <property name="Type" type="string" default="Door key D"/>
+ </objecttype>
  <objecttype name="Chest" color="#ff5500">
   <property name="KeyName" type="string" default="undefined"/>
   <property name="Name" type="string" default="Chest"/>

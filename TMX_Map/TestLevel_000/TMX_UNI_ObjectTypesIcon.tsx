@@ -13,6 +13,10 @@
  <tile id="41" type="Chest key B"/>
  <tile id="42" type="Chest key C"/>
  <tile id="43" type="Chest key D"/>
+ <tile id="50" type="Door key A"/>
+ <tile id="51" type="Door key B"/>
+ <tile id="52" type="Door key C"/>
+ <tile id="53" type="Door key D"/>
  <tile id="60" type="ChestWithKeyA"/>
  <tile id="61" type="ChestWithKeyB"/>
  <tile id="62" type="ChestWithKeyC"/>

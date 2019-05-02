@@ -41,18 +41,12 @@ func _ready():
 					#print(type)
 
 					match type:
-						"Health":
-							Create_health(object)
-						"Ammo": 
-							Create_ammo(object)
-						"Granade":
-							Create_granade(object)
-						"Coin":
-							Create_coin(object)
-						"PlayerStart":
-							Create_PlayerStart(object)
-						"InfoPanel":
-							Create_InfoPanel(object)
+						"Health": Create_health(object)
+						"Ammo": Create_ammo(object)
+						"Granade": Create_granade(object)
+						"Coin": Create_coin(object)
+						"PlayerStart": Create_PlayerStart(object)
+						"InfoPanel": Create_InfoPanel(object)
 						"Hazard U": Create_Hazard(object)
 						"Hazard R": Create_Hazard(object)
 						"Hazard D": Create_Hazard(object)
@@ -72,6 +66,10 @@ func _ready():
 						"ChestWithKeyB": Create_Chest(object)
 						"ChestWithKeyC": Create_Chest(object)
 						"ChestWithKeyD": Create_Chest(object)
+						"Door key A": Create_DoorKey(object)
+						"Door key B": Create_DoorKey(object)
+						"Door key C": Create_DoorKey(object)
+						"Door key D": Create_DoorKey(object)
 
 				pass
 
@@ -323,5 +321,18 @@ func Create_Chest(obj):
 	
 	entity.need_key = self.GetObjectProperty(obj,"NeedKey")
 	entity.key_name = self.GetObjectProperty(obj,"KeyName")
+	
+	pass
+
+# ------------------------------------------------------------------
+# SCENE: ITEM - DOOR KEYs
+# ------------------------------------------------------------------
+func Create_DoorKey(obj):
+	
+	var prefabName = self.GetObjectProperty(obj,"PrefabName")
+	var entityName = self.GetObjectProperty(obj,"Name")
+	var entity = CreateEntity(obj,entityName,prefabName)
+	
+	entity.item_amount = self.GetObjectProperty(obj,"Amount")
 	
 	pass
