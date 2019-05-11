@@ -21,8 +21,15 @@ func _ready():
 # teleport to target area when key_use is pressed on player
 #------------------------------------------------
 func Teleport(player):
-	_enabled_btn_check = true
-	#if need_key_item and GameData.HasItem(need_key,true): set_process(true)
+	
+	if need_key_item:
+		if GameData.HasItem(key_item_name,1):
+			_enabled_btn_check = false
+			return
+			pass
+		pass
+	
+	_enabled_btn_check = true	
 	eventOwner = player
 	pass
 

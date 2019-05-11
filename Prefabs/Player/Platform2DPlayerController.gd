@@ -203,31 +203,10 @@ func _on_TriggerDetector_area_entered( area ):
 	# | pickup ITEM
 	# -----------------------------------------------------
 	if area is ItemEntity: area.Pickup()
-	
-	
-	
-	
-	
-	# | pickup COIN
-	# -----------------------------------------------------
-	#if area.has_method('PickupCoin'): area.PickupCoin()
-	
-	# | pickup AMMO
-	# -----------------------------------------------------
-	#if area.has_method('PickupAmmo'): area.PickupAmmo()
-
-	# | pickup GRANADE
-	# -----------------------------------------------------
-	#if area.has_method('PickupGranade'): area.PickupGranade()
-	
+		
 	# | pickup KEY
 	# -----------------------------------------------------
 	if area.has_method('PickupKey'): area.PickupKey()
-
-	# | pickup HEALTH
-	# -----------------------------------------------------
-	#if area.has_method('PickupHealth'): area.PickupHealth()
-		
 
 
 	# | show message info on enter trigger zone
@@ -249,12 +228,7 @@ func _on_TriggerDetector_area_entered( area ):
 	if area.has_method('PickupPowerUpJump'):
 		# setup powerup
 		Globals.powerup_jump_instance = Globals.powerup_jump.instance()
-		#TODO:
-		# - recreate to activate by KEY 1/2/3
-		# - hilite powerup HUD icon
-		#jump.Start(move,container,area.time_to_off,area.new_jump_force)
 		Globals.powerup_jump_instance.Picked(move,container,area.time_to_off,area.new_jump_force)
-
 		# remove powerup
 		area.PickupPowerUpJump()
 
@@ -263,14 +237,8 @@ func _on_TriggerDetector_area_entered( area ):
 	if area.has_method('PickupPowerUpSpeed'):
 
 		# setup powerup
-		Globals.powerup_speed_instance = Globals.powerup_speed.instance()
-		
-		#TODO:
-		# - recreate to activate by KEY 1/2/3
-		# - hilite powerup HUD icon
-		#speed.Start(move,container,area.time_to_off,area.new_speed)
+		Globals.powerup_speed_instance = Globals.powerup_speed.instance()		
 		Globals.powerup_speed_instance.Picked(move,container,area.time_to_off,area.new_speed)
-
 		# remove powerup
 		area.PickupPowerUpSpeed()
 
@@ -280,23 +248,10 @@ func _on_TriggerDetector_area_entered( area ):
 
 		# setup powerup
 		Globals.powerup_gravity_instance = Globals.powerup_gravity.instance()
-		print("")
-		#TODO:
-		# - recreate to activate by KEY 1/2/3
-		# - hilite powerup HUD icon
 		Globals.powerup_gravity_instance.Picked(move,container,area.time_to_off,area.new_gravity)
-		print("")
 		# remove powerup
 		area.PickupPowerUpGravity()
-	
-# 	# | Pickup timelimited gravity
-# 	# -----------------------------------------------------
-# 	if area.has_method('EnterToEndPoint'):
-# 		var transition = Utils.find_node("HUD").get_node("TransitionScreen")
-# 		transition.Start(Globals.TO_BLACK)
-# 		yield(Utils.create_timer(1), "timeout") 
-# 		area.EnterToEndPoint()
-		
+
  # ---------------------------------------------------------
  # ON EXIT TRIGGER callback for scene entities
  # ---------------------------------------------------------

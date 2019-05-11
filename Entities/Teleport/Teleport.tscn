@@ -18,4 +18,3 @@ shape = SubResource( 1 )
 
 [node name="SpawnPosition" type="Position2D" parent="."]
 position = Vector2( 26, 0 )
-
