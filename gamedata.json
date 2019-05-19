@@ -1,9 +1,9 @@
 {
 	"ammo": 100,
-	"chest_key_a": 1,
-	"chest_key_b": 1,
-	"chest_key_c": 1,
-	"chest_key_d": 1,
+	"chest_key_a": 0,
+	"chest_key_b": 0,
+	"chest_key_c": 0,
+	"chest_key_d": 0,
 	"coins": 0,
 	"door_key_a": 0,
 	"door_key_b": 0,
