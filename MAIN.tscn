@@ -34,21 +34,21 @@ margin_bottom = 29.0
 
 [node name="HUD_Item_Info-AMMO" parent="CanvasLayer" instance=ExtResource( 5 )]
 margin_left = 9.0
-margin_top = 33.0
+margin_top = 43.0
 margin_right = 57.0
-margin_bottom = 49.0
+margin_bottom = 59.0
 
 [node name="HUD_Item_Info-COINS" parent="CanvasLayer" instance=ExtResource( 6 )]
 margin_left = 9.0
-margin_top = 54.0
+margin_top = 28.0
 margin_right = 57.0
-margin_bottom = 70.0
+margin_bottom = 44.0
 
 [node name="HUD_Item_Info-GRANADE" parent="CanvasLayer" instance=ExtResource( 7 )]
-margin_left = 8.0
-margin_top = 74.0
-margin_right = 56.0
-margin_bottom = 90.0
+margin_left = 9.0
+margin_top = 58.0
+margin_right = 57.0
+margin_bottom = 74.0
 
 [node name="HUD_PowerUp_SPEED" parent="CanvasLayer" instance=ExtResource( 8 )]
 position = Vector2( 412, 20 )
