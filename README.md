@@ -41,13 +41,17 @@
     - player jump height
     - world gravity
   - InfoPanel (show message box with user defined text)
-  - Door with move player to target position (next door with spawn position)
-  - Chest opened by F button without key or with chest key owned
+  - Doors
+    - with move player to target position (next door with spawn position)
+    - controled by USE key
+    - open door only with specific key
+  - Chest
+    - opened by F button
+    - open with chest key owned
 - simple inventory system
-- build level from TMX level created and defined in Tiled only
+- build level from TMX file created and defined in Tiled only
 
 # TODO
 
-- create basic entities:
-  - door opened only with key
+- create basic entities:  
   - minimap (?)
