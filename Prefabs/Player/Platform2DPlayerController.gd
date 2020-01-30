@@ -38,7 +38,7 @@ signal moveSignal
 
 # resize gizmo to player sprite size ()
 func _get_item_rect():
-    return get_node("PlayerAnimation/Sprite").get_item_rect()
+	return get_node("PlayerAnimation/Sprite").get_item_rect()
 
 # ---------------------------------------------------------
 # INITIALIZE ON START
